@@ -19,14 +19,8 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-bark/40 via-bark/10 to-bark/80" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,oklch(0.3_0.035_120/0.4),transparent_60%)]" />
 
-      {/* Top meta line */}
-      <div className="absolute top-28 left-0 right-0 z-10 px-6 md:px-12">
-        <div className="mx-auto max-w-[1400px] flex items-center justify-between text-cream/70 text-[10px] uppercase tracking-[0.35em]">
-          <span className="reveal">N 37.9° · W 7.8°</span>
-          <span className="hidden md:inline reveal">Alentejo — Trindade, Beja</span>
-          <span className="reveal">Est. MMXX</span>
-        </div>
-      </div>
+
+
 
       <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 pb-20 md:pb-28 text-cream">
         <div className="max-w-4xl">
