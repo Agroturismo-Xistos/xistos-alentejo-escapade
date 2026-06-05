@@ -1,9 +1,8 @@
 import hero from "@/assets/hero.jpg";
 import heroVideo from "@/assets/hero.mp4.asset.json";
-import { MessageCircle, ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { useT } from "@/i18n/LanguageContext";
-
-const WHATSAPP_BASE = "https://wa.me/351964814928";
+import BookingWidget from "./BookingWidget";
 
 export default function Hero() {
   const t = useT();
