@@ -28,14 +28,14 @@ export default function Navbar() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-cream/90 backdrop-blur-xl border-b border-bark/5"
+          ? "bg-ochre-soft/95 backdrop-blur-xl border-b border-bark/10"
           : "bg-transparent"
       }`}
     >
       <nav className="w-full px-6 md:px-10 flex items-center justify-between h-28 md:h-32">
         <a href="#inicio" className="flex items-center gap-3 shrink-0">
           <img
-            src={scrolled ? logo : logoLight.url}
+            src={logoLight.url}
             alt="Agroturismo Xistos"
             className="h-16 md:h-20 w-auto transition-opacity duration-300"
           />
@@ -47,8 +47,8 @@ export default function Navbar() {
               <li key={l.href}>
                 <a
                   href={l.href}
-                  className={`text-[14px] uppercase tracking-[0.2em] font-medium transition-colors relative after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-ochre after:transition-all hover:after:w-full ${
-                    scrolled ? "text-bark/80 hover:text-ochre" : "text-cream/90 hover:text-cream"
+                  className={`text-[14px] uppercase tracking-[0.2em] font-medium transition-colors relative after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-cream after:transition-all hover:after:w-full ${
+                    scrolled ? "text-bark hover:text-cream" : "text-cream/90 hover:text-cream"
                   }`}
                 >
                   {l.label}
@@ -61,7 +61,7 @@ export default function Navbar() {
             href="#campanhas"
             className={`hidden md:inline-flex items-center rounded-full px-7 py-3.5 text-[13px] uppercase tracking-[0.22em] font-medium transition-all duration-300 ${
               scrolled
-                ? "bg-olive-deep text-cream hover:bg-ochre"
+                ? "bg-bark text-cream hover:bg-olive-deep"
                 : "bg-cream/95 text-olive-deep hover:bg-ochre hover:text-cream"
             }`}
           >
@@ -69,13 +69,14 @@ export default function Navbar() {
           </a>
           <button
             aria-label="Abrir menu"
-            className={`lg:hidden p-2 ${scrolled ? "text-olive-deep" : "text-cream"}`}
+            className={`lg:hidden p-2 ${scrolled ? "text-bark" : "text-cream"}`}
             onClick={() => setOpen(true)}
           >
             <Menu className="h-7 w-7" />
           </button>
         </div>
       </nav>
+
 
 
       {/* Mobile drawer */}
