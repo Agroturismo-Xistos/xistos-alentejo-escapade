@@ -42,26 +42,27 @@
   --color-bark: var(--bark);
   --color-whatsapp: var(--whatsapp);
 
-  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
-  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
 
-  --shadow-soft: 0 10px 40px -10px color-mix(in oklab, var(--bark) 25%, transparent);
-  --shadow-card: 0 18px 50px -20px color-mix(in oklab, var(--bark) 30%, transparent);
+  --shadow-soft: 0 20px 60px -25px color-mix(in oklab, var(--bark) 25%, transparent);
+  --shadow-card: 0 30px 80px -30px color-mix(in oklab, var(--bark) 30%, transparent);
 }
 
 :root {
-  --radius: 1rem;
+  --radius: 1.25rem;
 
-  /* Earth palette */
-  --cream: oklch(0.985 0.012 85);
-  --sand: oklch(0.94 0.025 80);
-  --clay: oklch(0.78 0.06 60);
-  --ochre: oklch(0.68 0.13 65);
-  --ochre-soft: oklch(0.82 0.08 70);
-  --olive: oklch(0.55 0.07 120);
-  --olive-deep: oklch(0.36 0.05 125);
-  --bark: oklch(0.28 0.03 60);
+  /* Refined editorial earth palette */
+  --cream: oklch(0.975 0.008 80);
+  --sand: oklch(0.93 0.018 75);
+  --clay: oklch(0.74 0.05 55);
+  --ochre: oklch(0.62 0.12 55);
+  --ochre-soft: oklch(0.78 0.08 60);
+  --olive: oklch(0.48 0.05 115);
+  --olive-deep: oklch(0.30 0.035 120);
+  --bark: oklch(0.22 0.018 60);
   --whatsapp: oklch(0.65 0.16 150);
+
 
   --background: var(--cream);
   --foreground: var(--bark);
