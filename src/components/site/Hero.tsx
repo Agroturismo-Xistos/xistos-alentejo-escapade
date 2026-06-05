@@ -1,4 +1,5 @@
 import hero from "@/assets/hero.jpg";
+import heroVideo from "@/assets/hero.mp4.asset.json";
 import { MessageCircle, CalendarHeart, Sparkles } from "lucide-react";
 
 const WHATSAPP = "https://wa.me/351964814928?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Agroturismo%20Xistos.";
@@ -6,12 +7,17 @@ const WHATSAPP = "https://wa.me/351964814928?text=Olá!%20Gostaria%20de%20saber%
 export default function Hero() {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <img
-        src={hero}
-        alt="Pôr do sol sobre o campo alentejano com sobreiros"
+      <video
+        src={heroVideo.url}
+        poster={hero}
+        autoPlay
+        muted
+        loop
+        playsInline
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-bark/30 via-bark/20 to-bark/70" />
+
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-cream pt-24 pb-16">
         <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.35em] text-cream/80 reveal">
