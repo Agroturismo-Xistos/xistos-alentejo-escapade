@@ -29,29 +29,34 @@ export default function Hero() {
           <span className="text-ochre-soft">!</span>
         </h1>
 
-        <div className="mt-14 flex flex-wrap items-center justify-center gap-3 reveal">
-          <a
-            href="#campanhas"
-            className="group inline-flex items-center gap-3 rounded-full bg-cream text-olive-deep pl-6 pr-2 py-2 text-[11px] uppercase tracking-[0.22em] font-medium hover:bg-ochre hover:text-cream transition-all duration-500"
-          >
-            Reservar Estadia
-            <span className="grid place-items-center h-9 w-9 rounded-full bg-olive-deep text-cream group-hover:bg-cream group-hover:text-ochre transition-all">
+        <div className="mt-14 flex flex-col items-center gap-6 reveal">
+          <div className="flex flex-wrap items-stretch justify-center gap-3 w-full max-w-xl">
+            <a
+              href="#campanhas"
+              className="group flex-1 min-w-[180px] inline-flex items-center justify-center gap-3 rounded-full bg-cream text-olive-deep px-7 py-4 text-[12px] uppercase tracking-[0.22em] font-medium hover:bg-ochre hover:text-cream transition-all duration-500"
+            >
+              Reservar Estadia
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </span>
-          </a>
-          <a
-            href={WHATSAPP}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-cream/40 px-5 py-3 text-[11px] uppercase tracking-[0.22em] text-cream backdrop-blur-sm hover:bg-cream/10 hover:border-cream transition-all"
-          >
-            <MessageCircle className="h-3.5 w-3.5" /> WhatsApp
-          </a>
+            </a>
+            <a
+              href={WHATSAPP}
+              target="_blank"
+              rel="noreferrer"
+              className="flex-1 min-w-[180px] inline-flex items-center justify-center gap-3 rounded-full border border-cream/50 px-7 py-4 text-[12px] uppercase tracking-[0.22em] text-cream backdrop-blur-sm hover:bg-cream/10 hover:border-cream transition-all"
+            >
+              <MessageCircle className="h-4 w-4" /> WhatsApp
+            </a>
+          </div>
+
           <a
             href="#campanhas"
-            className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-ochre-soft hover:text-cream transition-colors px-3 py-3 border-b border-ochre-soft/40 hover:border-cream"
+            className="group mt-2 inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.28em] text-ochre-soft hover:text-cream transition-colors"
           >
-            <Sparkles className="h-3.5 w-3.5" /> Muda os teus Planos
+            <Sparkles className="h-3.5 w-3.5" />
+            <span className="border-b border-ochre-soft/40 group-hover:border-cream pb-1">
+              Aproveite a Campanha · Muda os teus Planos
+            </span>
+            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
           </a>
         </div>
       </div>
