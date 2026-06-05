@@ -8,7 +8,7 @@ import ActivitiesSection from "@/components/site/ActivitiesSection";
 import CampaignSection from "@/components/site/CampaignSection";
 import LocationSection from "@/components/site/LocationSection";
 import Footer from "@/components/site/Footer";
-import WhatsAppFloat from "@/components/site/WhatsAppFloat";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
