@@ -263,6 +263,13 @@ const en: Dict = {
     copyright: "All rights reserved.", signoff: "Made calmly in the Alentejo.",
   },
   whatsapp: { aria: "Contact via WhatsApp", defaultMsg: "Hello! I'd like to know more about Agroturismo Xistos." },
+  booking: {
+    when: "When", datesPlaceholder: "Check-in — Check-out",
+    who: "Who", adult: "adult", adults: "adults", child: "child", children: "children",
+    adultsHint: "From 17 years", childrenHint: "Up to 16 years",
+    promo: "Offer", code: "Code", codePlaceholder: "Enter code",
+    search: "Search", msgIntro: "Hello! I'd like to request a booking:",
+  },
   langSwitcher: "Language",
 };
 
