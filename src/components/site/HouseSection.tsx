@@ -42,34 +42,42 @@ const groups = [
 
 export default function HouseSection() {
   return (
-    <section id="casa" className="py-24 md:py-32 bg-cream">
-      <div className="mx-auto max-w-7xl px-6">
-        <SectionHeading
-          eyebrow="Alojamento"
-          title="A sua Casa"
-          subtitle="No Agroturismo Xistos, cada espaço foi pensado para que se sinta em casa, rodeado pela tranquilidade do campo e pela autenticidade do Alentejo."
-        />
+    <section id="casa" className="py-28 md:py-40 bg-cream">
+      <div className="mx-auto max-w-[1400px] px-6 md:px-12">
+        <div className="flex items-end justify-between gap-10 flex-wrap">
+          <SectionHeading
+            align="left"
+            eyebrow="Alojamento"
+            title="A sua Casa"
+            subtitle="Cada espaço foi pensado para que se sinta em casa, rodeado pela tranquilidade do campo e pela autenticidade do Alentejo."
+          />
+          <span className="text-[10px] uppercase tracking-[0.4em] text-bark/40 pb-2">
+            Três Experiências
+          </span>
+        </div>
 
-        <div className="mt-20 space-y-24">
+        <div className="mt-24 space-y-32">
           {groups.map((g, i) => (
             <div
               key={g.title}
-              className={`grid lg:grid-cols-12 gap-10 items-center ${
+              className={`grid lg:grid-cols-12 gap-10 lg:gap-16 items-center ${
                 i % 2 === 1 ? "lg:[&>div:first-child]:order-2" : ""
               }`}
             >
-              <div className="lg:col-span-7">
+              <div className="lg:col-span-8">
                 <ImageCarousel images={g.images} />
               </div>
-              <div className="lg:col-span-5">
-                <span className="text-xs uppercase tracking-[0.3em] text-ochre">
-                  0{i + 1}
+              <div className="lg:col-span-4">
+                <span className="font-display italic text-ochre text-2xl">
+                  — 0{i + 1}
                 </span>
-                <h3 className="mt-3 font-display text-4xl md:text-5xl text-olive-deep">
+                <h3 className="mt-4 font-display font-light text-5xl md:text-6xl text-olive-deep leading-[0.95] tracking-[-0.02em]">
                   {g.title}
                 </h3>
-                <div className="mt-4 h-px w-16 bg-clay" />
-                <p className="mt-6 text-muted-foreground leading-relaxed">{g.desc}</p>
+                <div className="mt-6 h-px w-12 bg-clay" />
+                <p className="mt-6 text-muted-foreground leading-[1.8] text-[15px] max-w-sm">
+                  {g.desc}
+                </p>
               </div>
             </div>
           ))}
