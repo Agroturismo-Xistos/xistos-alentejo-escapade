@@ -374,6 +374,13 @@ const fr: Dict = {
     copyright: "Tous droits réservés.", signoff: "Fait calmement en Alentejo.",
   },
   whatsapp: { aria: "Contacter via WhatsApp", defaultMsg: "Bonjour ! Je souhaite en savoir plus sur l'Agroturismo Xistos." },
+  booking: {
+    when: "Quand", datesPlaceholder: "Arrivée — Départ",
+    who: "Qui", adult: "adulte", adults: "adultes", child: "enfant", children: "enfants",
+    adultsHint: "À partir de 17 ans", childrenHint: "Jusqu'à 16 ans",
+    promo: "Offre", code: "Code", codePlaceholder: "Saisir le code",
+    search: "Rechercher", msgIntro: "Bonjour ! Je souhaite faire une demande de réservation :",
+  },
   langSwitcher: "Langue",
 };
 
@@ -478,6 +485,13 @@ const es: Dict = {
     copyright: "Todos los derechos reservados.", signoff: "Hecho con calma en el Alentejo.",
   },
   whatsapp: { aria: "Contactar por WhatsApp", defaultMsg: "¡Hola! Me gustaría saber más sobre el Agroturismo Xistos." },
+  booking: {
+    when: "Cuándo", datesPlaceholder: "Entrada — Salida",
+    who: "Quién", adult: "adulto", adults: "adultos", child: "niño", children: "niños",
+    adultsHint: "Desde 17 años", childrenHint: "Hasta 16 años",
+    promo: "Oferta", code: "Código", codePlaceholder: "Introduce el código",
+    search: "Buscar", msgIntro: "¡Hola! Quiero solicitar una reserva:",
+  },
   langSwitcher: "Idioma",
 };
 
