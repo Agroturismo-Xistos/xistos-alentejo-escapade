@@ -62,16 +62,13 @@ export default function Navbar() {
 
           <LanguageSwitcher light={!scrolled} />
 
-          <a
-            href="#campanhas"
-            className={`hidden md:inline-flex items-center rounded-full px-7 py-3.5 text-[13px] uppercase tracking-[0.22em] font-medium transition-all duration-300 ${
-              scrolled
-                ? "bg-bark text-cream hover:bg-olive-deep"
-                : "bg-cream/95 text-olive-deep hover:bg-ochre hover:text-cream"
-            }`}
+          <button
+            aria-label={t.nav.openMenu}
+            className={`lg:hidden p-2 ${scrolled ? "text-bark" : "text-cream"}`}
+            onClick={() => setOpen(true)}
           >
-            {t.nav.book}
-          </a>
+            <Menu className="h-7 w-7" />
+          </button>
           <button
             aria-label={t.nav.openMenu}
             className={`lg:hidden p-2 ${scrolled ? "text-bark" : "text-cream"}`}

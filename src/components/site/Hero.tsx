@@ -1,13 +1,11 @@
 import hero from "@/assets/hero.jpg";
 import heroVideo from "@/assets/hero.mp4.asset.json";
-import { MessageCircle, ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { useT } from "@/i18n/LanguageContext";
-
-const WHATSAPP_BASE = "https://wa.me/351964814928";
+import BookingWidget from "./BookingWidget";
 
 export default function Hero() {
   const t = useT();
-  const whatsappUrl = `${WHATSAPP_BASE}?text=${encodeURIComponent(t.whatsapp.defaultMsg)}`;
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -34,23 +32,8 @@ export default function Hero() {
         </h1>
 
         <div className="mt-14 flex flex-col items-center gap-6 reveal">
-          <div className="flex flex-wrap items-stretch justify-center gap-3 w-full max-w-xl">
-            <a
-              href="#campanhas"
-              className="group flex-1 min-w-[180px] inline-flex items-center justify-center gap-3 rounded-full bg-cream text-olive-deep px-7 py-4 text-[12px] uppercase tracking-[0.22em] font-medium hover:bg-ochre hover:text-cream transition-all duration-500"
-            >
-              {t.hero.bookStay}
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </a>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="flex-1 min-w-[180px] inline-flex items-center justify-center gap-3 rounded-full border border-cream/50 px-7 py-4 text-[12px] uppercase tracking-[0.22em] text-cream backdrop-blur-sm hover:bg-cream/10 hover:border-cream transition-all"
-            >
-              <MessageCircle className="h-4 w-4" /> {t.hero.whatsapp}
-            </a>
-          </div>
+          <BookingWidget />
+
 
           <a
             href="#campanhas"

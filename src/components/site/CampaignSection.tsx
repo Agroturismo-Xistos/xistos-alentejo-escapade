@@ -1,8 +1,8 @@
 import bg from "@/assets/campaign-bg.jpg";
-import { Check, MessageCircle, Sparkles, PlayCircle } from "lucide-react";
+import { Check, PlayCircle } from "lucide-react";
 import { useT } from "@/i18n/LanguageContext";
 
-const WHATSAPP = "https://wa.me/351964814928";
+
 const TEL = "tel:+351964814928";
 
 export default function CampaignSection() {
@@ -77,25 +77,8 @@ export default function CampaignSection() {
           </ul>
         </div>
 
-        <div className="mt-12 flex flex-wrap justify-center gap-4">
-          <a
-            href={`${WHATSAPP}?text=${encodeURIComponent(t.campaign.bookCampaignMsg)}`}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-ochre text-cream px-8 py-4 font-medium shadow-soft hover:bg-ochre/90 transition"
-          >
-            <Sparkles className="h-4 w-4" /> {t.campaign.bookCampaign}
-          </a>
-          <a
-            href={WHATSAPP}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-whatsapp text-cream px-8 py-4 font-medium shadow-soft hover:opacity-90 transition"
-          >
-            <MessageCircle className="h-4 w-4" /> +351 964 814 928
-          </a>
-        </div>
       </div>
     </section>
   );
 }
+
