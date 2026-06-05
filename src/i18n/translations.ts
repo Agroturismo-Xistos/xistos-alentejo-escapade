@@ -41,6 +41,13 @@ export type Dict = {
   };
   footer: { tagline: string; contacts: string; phoneLabel: string; nav: string; copyright: string; signoff: string };
   whatsapp: { aria: string; defaultMsg: string };
+  booking: {
+    when: string; datesPlaceholder: string;
+    who: string; adult: string; adults: string; child: string; children: string;
+    adultsHint: string; childrenHint: string;
+    promo: string; code: string; codePlaceholder: string;
+    search: string; msgIntro: string;
+  };
   langSwitcher: string;
 };
 
