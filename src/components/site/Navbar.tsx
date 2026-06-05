@@ -2,20 +2,23 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 import logoLight from "@/assets/logo-light.png.asset.json";
-
-const links = [
-  { href: "#inicio", label: "Início" },
-  { href: "#casa", label: "A sua Casa" },
-  { href: "#proposito", label: "Propósito" },
-  { href: "#natureza", label: "Natureza" },
-  { href: "#atividades", label: "Atividades" },
-  { href: "#campanhas", label: "Campanhas" },
-  { href: "#localizacao", label: "Localização" },
-];
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useT } from "@/i18n/LanguageContext";
 
 export default function Navbar() {
+  const t = useT();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+
+  const links = [
+    { href: "#inicio", label: t.nav.home },
+    { href: "#casa", label: t.nav.house },
+    { href: "#proposito", label: t.nav.purpose },
+    { href: "#natureza", label: t.nav.nature },
+    { href: "#atividades", label: t.nav.activities },
+    { href: "#campanhas", label: t.nav.campaigns },
+    { href: "#localizacao", label: t.nav.location },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -41,7 +44,7 @@ export default function Navbar() {
           />
         </a>
 
-        <div className="flex items-center gap-8 lg:gap-12">
+        <div className="flex items-center gap-6 lg:gap-10">
           <ul className="hidden lg:flex items-center gap-8 xl:gap-10">
             {links.map((l) => (
               <li key={l.href}>
@@ -57,6 +60,8 @@ export default function Navbar() {
             ))}
           </ul>
 
+          <LanguageSwitcher light={!scrolled} />
+
           <a
             href="#campanhas"
             className={`hidden md:inline-flex items-center rounded-full px-7 py-3.5 text-[13px] uppercase tracking-[0.22em] font-medium transition-all duration-300 ${
@@ -65,10 +70,10 @@ export default function Navbar() {
                 : "bg-cream/95 text-olive-deep hover:bg-ochre hover:text-cream"
             }`}
           >
-            Reservar
+            {t.nav.book}
           </a>
           <button
-            aria-label="Abrir menu"
+            aria-label={t.nav.openMenu}
             className={`lg:hidden p-2 ${scrolled ? "text-bark" : "text-cream"}`}
             onClick={() => setOpen(true)}
           >
@@ -76,8 +81,6 @@ export default function Navbar() {
           </button>
         </div>
       </nav>
-
-
 
       {/* Mobile drawer */}
       <div
@@ -92,7 +95,7 @@ export default function Navbar() {
           }`}
         >
           <div className="flex justify-end">
-            <button aria-label="Fechar menu" onClick={() => setOpen(false)} className="p-2">
+            <button aria-label={t.nav.closeMenu} onClick={() => setOpen(false)} className="p-2">
               <X className="h-6 w-6 text-olive-deep" />
             </button>
           </div>
@@ -109,6 +112,9 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
+          <div className="mt-10 pt-6 border-t border-bark/10">
+            <LanguageSwitcher />
+          </div>
         </div>
       </div>
     </header>
