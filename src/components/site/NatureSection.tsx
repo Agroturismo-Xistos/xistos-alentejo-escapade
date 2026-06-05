@@ -16,19 +16,18 @@ const images = [
 
 export default function NatureSection() {
   return (
-    <section id="natureza" className="py-24 md:py-32 bg-sand/60">
-      <div className="mx-auto max-w-7xl px-6">
-        <SectionHeading
-          eyebrow="Ecossistema"
-          title="Natureza"
-          subtitle="Descobrir, respirar, contemplar."
-        />
-
-        <div className="mt-16 grid lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-7">
-            <ImageCarousel images={images} aspect="aspect-[4/3]" />
+    <section id="natureza" className="py-28 md:py-40 bg-cream">
+      <div className="mx-auto max-w-[1400px] px-6 md:px-12">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-end">
+          <div className="lg:col-span-5">
+            <SectionHeading
+              align="left"
+              eyebrow="Ecossistema"
+              title="Natureza."
+              subtitle="Descobrir, respirar, contemplar — no ritmo lento do Alentejo."
+            />
           </div>
-          <div className="lg:col-span-5 space-y-6 text-bark/80 leading-relaxed">
+          <div className="lg:col-span-7 text-bark/75 leading-[1.8] text-[15px] space-y-5">
             <p>
               No Agroturismo Xistos, a natureza é vivida com calma, curiosidade e autenticidade.
               Entre o Bosque Mediterrânico, os trilhos, a ribeira, a charca, os animais do monte,
@@ -41,7 +40,18 @@ export default function NatureSection() {
               percursos pela ribeira, observação da fauna e flora, e momentos de pura
               tranquilidade no coração do Alentejo.
             </p>
+            <div className="flex flex-wrap gap-2 pt-4">
+              {["Bosque Mediterrânico", "Ribeira", "Charca", "Animais", "Abelhas", "Pôr do Sol"].map((tag) => (
+                <span key={tag} className="text-[11px] uppercase tracking-[0.2em] px-3 py-1.5 rounded-full border border-bark/15 text-bark/70">
+                  {tag}
+                </span>
+              ))}
+            </div>
           </div>
+        </div>
+
+        <div className="mt-20">
+          <ImageCarousel images={images} aspect="aspect-[21/9]" />
         </div>
       </div>
     </section>
