@@ -16,8 +16,8 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-bark/40 via-bark/20 to-bark/70" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,oklch(0.22_0.018_60/0.5)_100%)]" />
+      <div className="absolute inset-0 bg-bark/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-bark/40 via-bark/30 to-bark/70" />
 
       <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-12 text-center text-cream">
         <span className="inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.4em] text-ochre-soft reveal">
