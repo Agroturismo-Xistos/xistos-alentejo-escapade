@@ -1,6 +1,5 @@
 import hero from "@/assets/hero.jpg";
 import heroVideo from "@/assets/hero.mp4.asset.json";
-import { ArrowRight, Sparkles } from "lucide-react";
 import { useT } from "@/i18n/LanguageContext";
 import BookingWidget from "./BookingWidget";
 
