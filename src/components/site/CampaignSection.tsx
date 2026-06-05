@@ -11,7 +11,7 @@ export default function CampaignSection() {
   return (
     <section id="campanhas" className="relative py-24 md:py-32 overflow-hidden">
       <img src={bg} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
-      <div className="absolute inset-0 bg-gradient-to-b from-olive-deep/90 via-olive-deep/85 to-bark/90" />
+      
 
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="text-center max-w-3xl mx-auto">
