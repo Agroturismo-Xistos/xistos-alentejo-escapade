@@ -152,6 +152,13 @@ const pt: Dict = {
     copyright: "Todos os direitos reservados.", signoff: "Feito com calma no Alentejo.",
   },
   whatsapp: { aria: "Contactar via WhatsApp", defaultMsg: "Olá! Gostaria de saber mais sobre o Agroturismo Xistos." },
+  booking: {
+    when: "Quando", datesPlaceholder: "Entrada — Saída",
+    who: "Quem", adult: "adulto", adults: "adultos", child: "criança", children: "crianças",
+    adultsHint: "Desde 17 anos", childrenHint: "Até 16 anos",
+    promo: "Promoção", code: "Código", codePlaceholder: "Insira o código",
+    search: "Pesquisar", msgIntro: "Olá! Gostaria de pedir uma reserva:",
+  },
   langSwitcher: "Idioma",
 };
 
