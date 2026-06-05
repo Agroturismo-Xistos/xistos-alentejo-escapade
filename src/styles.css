@@ -92,18 +92,48 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-body);
+    font-weight: 400;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.01em; }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    font-variation-settings: "opsz" 96;
+  }
   section { scroll-margin-top: 80px; }
+  ::selection { background: var(--ochre); color: var(--cream); }
 }
 
 @utility text-balance { text-wrap: balance; }
+@utility text-pretty { text-wrap: pretty; }
 
 @keyframes float-in {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
 }
-@utility reveal {
-  animation: float-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
+@keyframes shimmer-line {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+@utility reveal {
+  animation: float-in 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@utility reveal-slow {
+  animation: fade-up 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@utility editorial-rule {
+  position: relative;
+  display: inline-block;
+  height: 1px;
+  background: currentColor;
+  transform-origin: left;
+  animation: shimmer-line 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
