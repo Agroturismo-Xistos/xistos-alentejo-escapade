@@ -1,4 +1,5 @@
-import bg from "@/assets/purpose-bg.jpg";
+import bgAsset from "@/assets/purpose-couple.jpg.asset.json";
+const bg = bgAsset.url;
 import { useT } from "@/i18n/LanguageContext";
 
 export default function PurposeSection() {
