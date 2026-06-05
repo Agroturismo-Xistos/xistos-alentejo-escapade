@@ -1,4 +1,5 @@
-import bg from "@/assets/campaign-bg.jpg";
+import bgAsset from "@/assets/campaign-bg.jpg.asset.json";
+const bg = bgAsset.url;
 import { Check, MessageCircle, Sparkles, PlayCircle } from "lucide-react";
 import { useT } from "@/i18n/LanguageContext";
 
