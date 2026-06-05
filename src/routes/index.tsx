@@ -42,7 +42,7 @@ function Index() {
       <CampaignSection />
       <LocationSection />
       <Footer />
-      <WhatsAppFloat />
+      
     </main>
   );
 }
