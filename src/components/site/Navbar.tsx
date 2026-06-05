@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
+import logoLight from "@/assets/logo-light.png.asset.json";
 
 const links = [
   { href: "#inicio", label: "Início" },
@@ -33,7 +34,11 @@ export default function Navbar() {
     >
       <nav className="mx-auto max-w-[1400px] px-6 md:px-12 flex items-center justify-between h-20">
         <a href="#inicio" className="flex items-center gap-3 shrink-0">
-          <img src={logo} alt="Agroturismo Xistos" className="h-11 md:h-12 w-auto" />
+          <img
+            src={scrolled ? logo : logoLight.url}
+            alt="Agroturismo Xistos"
+            className="h-11 md:h-12 w-auto transition-opacity duration-300"
+          />
         </a>
 
         <ul className="hidden lg:flex items-center gap-10">
