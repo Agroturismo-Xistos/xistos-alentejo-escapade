@@ -70,40 +70,47 @@ const activities = [
 
 export default function ActivitiesSection() {
   return (
-    <section id="atividades" className="py-24 md:py-32 bg-cream">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="atividades" className="py-28 md:py-40 bg-cream">
+      <div className="mx-auto max-w-[1400px] px-6 md:px-12">
         <SectionHeading
+          align="left"
           eyebrow="Experiências"
           title="Atividades"
           subtitle="Experiências autênticas para descobrir o Alentejo com outros olhos."
         />
 
-        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {activities.map((a) => (
+        <div className="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {activities.map((a, idx) => (
             <article
               key={a.title}
-              className="group flex flex-col rounded-3xl bg-card overflow-hidden shadow-soft hover:shadow-card transition-all duration-500 border border-border"
+              className="group flex flex-col rounded-3xl bg-card overflow-hidden border border-bark/8 hover:border-ochre/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-card"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className="relative aspect-[5/4] overflow-hidden">
                 <img
                   src={a.img}
                   alt={a.title}
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-bark/60 to-transparent" />
-                <h3 className="absolute bottom-5 left-5 right-5 font-display text-2xl text-cream leading-tight">
+                <div className="absolute inset-0 bg-gradient-to-t from-bark/80 via-bark/20 to-transparent" />
+                <span className="absolute top-5 left-5 text-[10px] uppercase tracking-[0.35em] text-cream/80">
+                  0{idx + 1} / 03
+                </span>
+                <h3 className="absolute bottom-6 left-6 right-6 font-display font-light text-3xl md:text-4xl text-cream leading-[1.05] tracking-[-0.02em]">
                   {a.title}
                 </h3>
               </div>
-              <ul className="p-7 space-y-5 flex-1">
+              <ul className="p-7 space-y-0 flex-1 divide-y divide-bark/8">
                 {a.items.map((it) => (
-                  <li key={it.name}>
-                    <p className="font-medium text-olive-deep leading-snug">{it.name}</p>
-                    <ul className="mt-1.5 text-sm text-muted-foreground space-y-0.5">
+                  <li key={it.name} className="py-4 first:pt-0 last:pb-0 group/item">
+                    <p className="font-medium text-olive-deep leading-snug text-[14px]">
+                      {it.name}
+                    </p>
+                    <ul className="mt-2 text-[12px] text-muted-foreground/90 space-y-1">
                       {it.details.map((d) => (
-                        <li key={d} className="flex gap-2 before:content-['·'] before:text-ochre">
-                          <span>{d}</span>
+                        <li key={d} className="flex gap-2">
+                          <span className="text-ochre mt-0.5">·</span>
+                          <span className="leading-relaxed">{d}</span>
                         </li>
                       ))}
                     </ul>

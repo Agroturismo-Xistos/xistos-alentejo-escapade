@@ -27,21 +27,23 @@ export default function Navbar() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-cream/85 backdrop-blur-md shadow-[0_2px_20px_-10px_rgba(0,0,0,0.15)]"
+          ? "bg-cream/90 backdrop-blur-xl border-b border-bark/5"
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto max-w-7xl px-5 md:px-10 flex items-center justify-between h-20">
+      <nav className="mx-auto max-w-[1400px] px-6 md:px-12 flex items-center justify-between h-20">
         <a href="#inicio" className="flex items-center gap-3 shrink-0">
-          <img src={logo} alt="Agroturismo Xistos" className="h-12 md:h-14 w-auto" />
+          <img src={logo} alt="Agroturismo Xistos" className="h-11 md:h-12 w-auto" />
         </a>
 
-        <ul className="hidden lg:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center gap-10">
           {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-sm tracking-wide text-foreground/80 hover:text-ochre transition-colors relative after:absolute after:bottom-[-6px] after:left-0 after:h-px after:w-0 after:bg-ochre after:transition-all hover:after:w-full"
+                className={`text-[12px] uppercase tracking-[0.18em] font-medium transition-colors relative after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-ochre after:transition-all hover:after:w-full ${
+                  scrolled ? "text-bark/75 hover:text-ochre" : "text-cream/90 hover:text-cream"
+                }`}
               >
                 {l.label}
               </a>
@@ -49,13 +51,25 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <button
-          aria-label="Abrir menu"
-          className="lg:hidden p-2 text-olive-deep"
-          onClick={() => setOpen(true)}
-        >
-          <Menu className="h-7 w-7" />
-        </button>
+        <div className="flex items-center gap-3">
+          <a
+            href="#campanhas"
+            className={`hidden md:inline-flex items-center rounded-full px-5 py-2.5 text-[11px] uppercase tracking-[0.2em] font-medium transition-all duration-300 ${
+              scrolled
+                ? "bg-olive-deep text-cream hover:bg-ochre"
+                : "bg-cream/95 text-olive-deep hover:bg-ochre hover:text-cream"
+            }`}
+          >
+            Reservar
+          </a>
+          <button
+            aria-label="Abrir menu"
+            className={`lg:hidden p-2 ${scrolled ? "text-olive-deep" : "text-cream"}`}
+            onClick={() => setOpen(true)}
+          >
+            <Menu className="h-6 w-6" />
+          </button>
+        </div>
       </nav>
 
       {/* Mobile drawer */}
