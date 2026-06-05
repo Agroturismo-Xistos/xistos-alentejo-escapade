@@ -4,27 +4,31 @@ export default function SectionHeading({
   subtitle,
   align = "center",
   light = false,
+  index,
 }: {
   eyebrow?: string;
   title: string;
   subtitle?: string;
   align?: "center" | "left";
   light?: boolean;
+  index?: string;
 }) {
-  const a = align === "center" ? "text-center mx-auto" : "text-left";
+  const a = align === "center" ? "text-center mx-auto items-center" : "text-left items-start";
   return (
-    <div className={`max-w-3xl ${a}`}>
+    <div className={`max-w-3xl flex flex-col ${a}`}>
       {eyebrow && (
         <span
-          className={`inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.35em] ${
-            light ? "text-cream/80" : "text-ochre"
+          className={`inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.4em] ${
+            light ? "text-cream/70" : "text-ochre"
           }`}
         >
-          <span className="h-px w-6 bg-current" /> {eyebrow}
+          <span className="h-px w-8 bg-current" />
+          {eyebrow}
+          {index && <span className="opacity-50">— {index}</span>}
         </span>
       )}
       <h2
-        className={`mt-4 font-display text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-balance ${
+        className={`mt-6 font-display font-light text-5xl md:text-6xl lg:text-7xl leading-[0.95] tracking-[-0.03em] text-balance ${
           light ? "text-cream" : "text-olive-deep"
         }`}
       >
@@ -32,8 +36,8 @@ export default function SectionHeading({
       </h2>
       {subtitle && (
         <p
-          className={`mt-5 text-base md:text-lg leading-relaxed text-balance ${
-            light ? "text-cream/85" : "text-muted-foreground"
+          className={`mt-6 max-w-xl text-[15px] md:text-base leading-[1.7] text-pretty ${
+            light ? "text-cream/80" : "text-muted-foreground"
           }`}
         >
           {subtitle}
