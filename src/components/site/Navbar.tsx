@@ -32,34 +32,34 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto max-w-[1400px] px-6 md:px-12 flex items-center justify-between h-20">
+      <nav className="w-full px-6 md:px-10 flex items-center justify-between h-28 md:h-32">
         <a href="#inicio" className="flex items-center gap-3 shrink-0">
           <img
             src={scrolled ? logo : logoLight.url}
             alt="Agroturismo Xistos"
-            className="h-11 md:h-12 w-auto transition-opacity duration-300"
+            className="h-16 md:h-20 w-auto transition-opacity duration-300"
           />
         </a>
 
-        <ul className="hidden lg:flex items-center gap-10">
-          {links.map((l) => (
-            <li key={l.href}>
-              <a
-                href={l.href}
-                className={`text-[12px] uppercase tracking-[0.18em] font-medium transition-colors relative after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-ochre after:transition-all hover:after:w-full ${
-                  scrolled ? "text-bark/75 hover:text-ochre" : "text-cream/90 hover:text-cream"
-                }`}
-              >
-                {l.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="flex items-center gap-8 lg:gap-12">
+          <ul className="hidden lg:flex items-center gap-8 xl:gap-10">
+            {links.map((l) => (
+              <li key={l.href}>
+                <a
+                  href={l.href}
+                  className={`text-[14px] uppercase tracking-[0.2em] font-medium transition-colors relative after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-ochre after:transition-all hover:after:w-full ${
+                    scrolled ? "text-bark/80 hover:text-ochre" : "text-cream/90 hover:text-cream"
+                  }`}
+                >
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
 
-        <div className="flex items-center gap-3">
           <a
             href="#campanhas"
-            className={`hidden md:inline-flex items-center rounded-full px-5 py-2.5 text-[11px] uppercase tracking-[0.2em] font-medium transition-all duration-300 ${
+            className={`hidden md:inline-flex items-center rounded-full px-7 py-3.5 text-[13px] uppercase tracking-[0.22em] font-medium transition-all duration-300 ${
               scrolled
                 ? "bg-olive-deep text-cream hover:bg-ochre"
                 : "bg-cream/95 text-olive-deep hover:bg-ochre hover:text-cream"
@@ -72,10 +72,11 @@ export default function Navbar() {
             className={`lg:hidden p-2 ${scrolled ? "text-olive-deep" : "text-cream"}`}
             onClick={() => setOpen(true)}
           >
-            <Menu className="h-6 w-6" />
+            <Menu className="h-7 w-7" />
           </button>
         </div>
       </nav>
+
 
       {/* Mobile drawer */}
       <div
