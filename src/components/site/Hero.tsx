@@ -34,27 +34,9 @@ export default function Hero() {
         <div className="mt-14 flex flex-col items-center gap-6 reveal">
           <BookingWidget />
 
-
-          <a
-            href="#campanhas"
-            className="group mt-2 inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.28em] text-ochre-soft hover:text-cream transition-colors"
-          >
-            <Sparkles className="h-3.5 w-3.5" />
-            <span className="border-b border-ochre-soft/40 group-hover:border-cream pb-1">
-              {t.hero.campaignCta}
-            </span>
-            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-          </a>
         </div>
       </div>
 
-      <a
-        href="#casa"
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 text-cream/70 text-[10px] tracking-[0.4em] uppercase z-10 flex flex-col items-center gap-2 hover:text-cream transition-colors"
-      >
-        <span className="h-10 w-px bg-cream/40" />
-        {t.hero.scroll}
-      </a>
     </section>
   );
 }
