@@ -60,7 +60,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-4 justify-self-end">
           <div className="hidden md:block">
-            <LanguageSwitcher light={!scrolled} />
+            <LanguageSwitcher light />
           </div>
           <a
             href="tel:+351964814928"
