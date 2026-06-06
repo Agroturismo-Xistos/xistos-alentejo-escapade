@@ -10,6 +10,9 @@ import LocationSection from "@/components/site/LocationSection";
 import Footer from "@/components/site/Footer";
 import BookingWidget from "@/components/site/BookingWidget";
 import LanguageSwitcher from "@/components/site/LanguageSwitcher";
+import greenKey from "@/assets/greenkey.png.asset.json";
+import biosphere from "@/assets/biosphere.png.asset.json";
+
 
 
 export const Route = createFileRoute("/")({
@@ -51,6 +54,10 @@ function Index() {
       </div>
       <div className="fixed bottom-4 right-4 z-50">
         <LanguageSwitcher />
+      </div>
+      <div className="fixed bottom-4 left-4 z-50 flex items-end gap-3 bg-cream/90 backdrop-blur rounded-lg p-2 shadow-lg">
+        <img src={greenKey.url} alt="Green Key" className="h-14 w-auto object-contain" />
+        <img src={biosphere.url} alt="Biosphere Sustainable Lifestyle" className="h-14 w-auto object-contain" />
       </div>
     </main>
   );
