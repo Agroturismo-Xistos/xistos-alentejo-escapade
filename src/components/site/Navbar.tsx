@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 
 import logoLight from "@/assets/logo-light.png.asset.json";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -43,12 +43,12 @@ export default function Navbar() {
           />
         </a>
 
-        <ul className="hidden lg:flex items-center justify-center gap-8 xl:gap-10 justify-self-center">
+        <ul className="hidden lg:flex items-center justify-center gap-8 xl:gap-12 justify-self-center">
           {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className={`text-[14px] uppercase tracking-[0.2em] font-medium transition-colors relative after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-cream after:transition-all hover:after:w-full ${
+                className={`whitespace-nowrap text-[17px] uppercase tracking-[0.18em] font-medium transition-colors relative after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-cream after:transition-all hover:after:w-full ${
                   scrolled ? "text-bark hover:text-cream" : "text-cream/90 hover:text-cream"
                 }`}
               >
@@ -61,10 +61,11 @@ export default function Navbar() {
         <div className="flex items-center gap-4 justify-self-end">
           <a
             href="tel:+351964814928"
-            className={`hidden md:inline-block text-[14px] uppercase tracking-[0.2em] font-medium transition-colors ${
+            className={`hidden md:inline-flex items-center gap-2 text-[17px] uppercase tracking-[0.18em] font-medium transition-colors ${
               scrolled ? "text-bark hover:text-ochre" : "text-cream/90 hover:text-cream"
             }`}
           >
+            <Phone className="h-5 w-5" />
             +351 964 814 928
           </a>
 
