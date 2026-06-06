@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Instagram } from "lucide-react";
 import Navbar from "@/components/site/Navbar";
 import Hero from "@/components/site/Hero";
 import HouseSection from "@/components/site/HouseSection";
@@ -9,7 +10,6 @@ import CampaignSection from "@/components/site/CampaignSection";
 import LocationSection from "@/components/site/LocationSection";
 import Footer from "@/components/site/Footer";
 import BookingWidget from "@/components/site/BookingWidget";
-import LanguageSwitcher from "@/components/site/LanguageSwitcher";
 import greenKey from "@/assets/greenkey.png.asset.json";
 import biosphere from "@/assets/biosphere.png.asset.json";
 
