@@ -59,6 +59,9 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-4 justify-self-end">
+          <div className="hidden md:block">
+            <LanguageSwitcher light={!scrolled} />
+          </div>
           <a
             href="tel:+351964814928"
             className={`hidden md:inline-flex items-center gap-2 text-[17px] uppercase tracking-[0.18em] font-medium transition-colors ${
