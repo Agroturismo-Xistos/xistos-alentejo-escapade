@@ -30,7 +30,6 @@ export default function LanguageSwitcher({ light = false }: { light?: boolean })
         }`}
       >
         <Globe className="h-3.5 w-3.5" />
-        <span>{current.flag}</span>
         <span className="font-medium">{current.label}</span>
       </button>
       {open && (
