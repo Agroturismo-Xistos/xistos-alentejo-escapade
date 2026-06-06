@@ -8,6 +8,7 @@ import ActivitiesSection from "@/components/site/ActivitiesSection";
 import CampaignSection from "@/components/site/CampaignSection";
 import LocationSection from "@/components/site/LocationSection";
 import Footer from "@/components/site/Footer";
+import BookingWidget from "@/components/site/BookingWidget";
 
 
 export const Route = createFileRoute("/")({
@@ -42,7 +43,11 @@ function Index() {
       <CampaignSection />
       <LocationSection />
       <Footer />
-      
+      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[min(100%-1rem,56rem)] px-2 pointer-events-none">
+        <div className="pointer-events-auto">
+          <BookingWidget />
+        </div>
+      </div>
     </main>
   );
 }

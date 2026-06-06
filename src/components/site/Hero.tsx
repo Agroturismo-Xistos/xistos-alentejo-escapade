@@ -1,7 +1,6 @@
 import hero from "@/assets/hero.jpg";
 import heroVideo from "@/assets/hero.mp4.asset.json";
 import { useT } from "@/i18n/LanguageContext";
-import BookingWidget from "./BookingWidget";
 
 export default function Hero() {
   const t = useT();
@@ -29,13 +28,7 @@ export default function Hero() {
           <em className="italic text-ochre-soft">{t.hero.titleB}</em>
           <span className="text-ochre-soft">!</span>
         </h1>
-
-        <div className="mt-14 flex flex-col items-center gap-6 reveal">
-          <BookingWidget />
-
-        </div>
       </div>
-
     </section>
   );
 }
