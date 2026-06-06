@@ -43,7 +43,11 @@ function Index() {
       <CampaignSection />
       <LocationSection />
       <Footer />
-      
+      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[min(100%-1rem,56rem)] px-2 pointer-events-none">
+        <div className="pointer-events-auto">
+          <BookingWidget />
+        </div>
+      </div>
     </main>
   );
 }
