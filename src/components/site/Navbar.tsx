@@ -49,7 +49,7 @@ export default function Navbar() {
               <a
                 href={l.href}
                 className={`whitespace-nowrap text-[17px] uppercase tracking-[0.18em] font-medium transition-colors relative after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-cream after:transition-all hover:after:w-full ${
-                  scrolled ? "text-bark hover:text-cream" : "text-cream/90 hover:text-cream"
+                  scrolled ? "text-cream hover:text-cream/80" : "text-cream/90 hover:text-cream"
                 }`}
               >
                 {l.label}
@@ -60,12 +60,12 @@ export default function Navbar() {
 
         <div className="flex items-center gap-4 justify-self-end">
           <div className="hidden md:block">
-            <LanguageSwitcher light={!scrolled} />
+            <LanguageSwitcher light />
           </div>
           <a
             href="tel:+351964814928"
             className={`hidden md:inline-flex items-center gap-2 text-[17px] uppercase tracking-[0.18em] font-medium transition-colors ${
-              scrolled ? "text-bark hover:text-ochre" : "text-cream/90 hover:text-cream"
+              scrolled ? "text-cream hover:text-cream/80" : "text-cream/90 hover:text-cream"
             }`}
           >
             <Phone className="h-5 w-5" />
