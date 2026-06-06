@@ -9,6 +9,7 @@ import CampaignSection from "@/components/site/CampaignSection";
 import LocationSection from "@/components/site/LocationSection";
 import Footer from "@/components/site/Footer";
 import BookingWidget from "@/components/site/BookingWidget";
+import LanguageSwitcher from "@/components/site/LanguageSwitcher";
 
 
 export const Route = createFileRoute("/")({
