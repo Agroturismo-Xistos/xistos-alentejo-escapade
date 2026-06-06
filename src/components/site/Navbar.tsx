@@ -11,7 +11,6 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { href: "#inicio", label: t.nav.home },
     { href: "#casa", label: t.nav.house },
     { href: "#proposito", label: t.nav.purpose },
     { href: "#natureza", label: t.nav.nature },
@@ -60,7 +59,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <LanguageSwitcher light={!scrolled} />
+          
 
           <button
             aria-label={t.nav.openMenu}

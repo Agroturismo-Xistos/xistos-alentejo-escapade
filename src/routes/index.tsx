@@ -9,6 +9,7 @@ import CampaignSection from "@/components/site/CampaignSection";
 import LocationSection from "@/components/site/LocationSection";
 import Footer from "@/components/site/Footer";
 import BookingWidget from "@/components/site/BookingWidget";
+import LanguageSwitcher from "@/components/site/LanguageSwitcher";
 
 
 export const Route = createFileRoute("/")({
@@ -47,6 +48,9 @@ function Index() {
         <div className="pointer-events-auto">
           <BookingWidget />
         </div>
+      </div>
+      <div className="fixed bottom-4 right-4 z-50">
+        <LanguageSwitcher />
       </div>
     </main>
   );
