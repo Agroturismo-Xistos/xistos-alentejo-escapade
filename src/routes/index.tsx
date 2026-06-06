@@ -52,9 +52,6 @@ function Index() {
           <BookingWidget />
         </div>
       </div>
-      <div className="fixed bottom-4 right-4 z-50">
-        <LanguageSwitcher />
-      </div>
       <div className="fixed bottom-4 left-4 z-50 flex items-end gap-3 bg-cream/90 backdrop-blur rounded-lg p-2 shadow-lg">
         <img src={greenKey.url} alt="Green Key" className="h-14 w-auto object-contain" />
         <img src={biosphere.url} alt="Biosphere Sustainable Lifestyle" className="h-14 w-auto object-contain" />
