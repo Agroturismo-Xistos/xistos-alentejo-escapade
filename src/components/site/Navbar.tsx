@@ -59,7 +59,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <LanguageSwitcher light={!scrolled} />
+          
 
           <button
             aria-label={t.nav.openMenu}
