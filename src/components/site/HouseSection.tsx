@@ -5,6 +5,8 @@ import c2 from "@/assets/common-2.jpg.asset.json";
 import c3 from "@/assets/common-3.jpg.asset.json";
 import c4 from "@/assets/common-4.jpg.asset.json";
 import c5 from "@/assets/common-5.jpg.asset.json";
+import c6 from "@/assets/common-6.jpg.asset.json";
+import c7 from "@/assets/common-7.jpg.asset.json";
 import r1 from "@/assets/room-1.jpg.asset.json";
 import r2 from "@/assets/room-2.jpg.asset.json";
 import r3 from "@/assets/room-3.jpg.asset.json";
@@ -16,7 +18,7 @@ import a3 from "@/assets/apt-3.jpg";
 import { useT } from "@/i18n/LanguageContext";
 
 const groupImages = [
-  [c1.url, c2.url, c3.url, c4.url, c5.url],
+  [c1.url, c2.url, c3.url, c4.url, c5.url, c6.url, c7.url],
   [r1.url, r2.url, r3.url, r4.url, r5.url],
   [a1, a2, a3],
 ];
@@ -35,6 +37,8 @@ const commonAlts = [
   "Sala de estar ampla e luminosa",
   "Cozinha e sala de refeições",
   "Mesa de lanche junto à piscina",
+  "Fachada ao anoitecer com escultura iluminada",
+  "Sala de jantar com detalhes decorativos",
 ];
 
 export default function HouseSection() {
