@@ -5,9 +5,11 @@ import c2 from "@/assets/common-2.jpg.asset.json";
 import c3 from "@/assets/common-3.jpg.asset.json";
 import c4 from "@/assets/common-4.jpg.asset.json";
 import c5 from "@/assets/common-5.jpg.asset.json";
-import r1 from "@/assets/room-1.jpg";
-import r2 from "@/assets/room-2.jpg";
-import r3 from "@/assets/room-3.jpg";
+import r1 from "@/assets/room-1.jpg.asset.json";
+import r2 from "@/assets/room-2.jpg.asset.json";
+import r3 from "@/assets/room-3.jpg.asset.json";
+import r4 from "@/assets/room-4.jpg.asset.json";
+import r5 from "@/assets/room-5.jpg.asset.json";
 import a1 from "@/assets/apt-1.jpg";
 import a2 from "@/assets/apt-2.jpg";
 import a3 from "@/assets/apt-3.jpg";
@@ -15,8 +17,16 @@ import { useT } from "@/i18n/LanguageContext";
 
 const groupImages = [
   [c1.url, c2.url, c3.url, c4.url, c5.url],
-  [r1, r2, r3],
+  [r1.url, r2.url, r3.url, r4.url, r5.url],
   [a1, a2, a3],
+];
+
+const roomAlts = [
+  "Quarto com vista para a piscina",
+  "Exterior dos quartos ao anoitecer",
+  "Casa de banho dos quartos",
+  "Detalhe do quarto com secretária",
+  "Quarto duplo acolhedor",
 ];
 
 const commonAlts = [
