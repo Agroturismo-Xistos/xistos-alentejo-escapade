@@ -56,7 +56,8 @@ export default function HouseSection() {
 
         <div className="mt-24 space-y-32">
           {t.house.groups.map((g, i) => {
-            const images = groupImages[i].map((src, j) => ({ src, alt: (i === 0 ? commonAlts[j] : g.alts[j]) ?? g.title }));
+            const altsForGroup = i === 0 ? commonAlts : i === 1 ? roomAlts : g.alts;
+            const images = groupImages[i].map((src, j) => ({ src, alt: altsForGroup?.[j] ?? g.title }));
             return (
               <div
                 key={g.title}
