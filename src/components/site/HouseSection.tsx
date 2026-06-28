@@ -1,8 +1,10 @@
 import SectionHeading from "./SectionHeading";
 import ImageCarousel from "./ImageCarousel";
-import c1 from "@/assets/common-1.jpg";
-import c2 from "@/assets/common-2.jpg";
-import c3 from "@/assets/common-3.jpg";
+import c1 from "@/assets/common-1.jpg.asset.json";
+import c2 from "@/assets/common-2.jpg.asset.json";
+import c3 from "@/assets/common-3.jpg.asset.json";
+import c4 from "@/assets/common-4.jpg.asset.json";
+import c5 from "@/assets/common-5.jpg.asset.json";
 import r1 from "@/assets/room-1.jpg";
 import r2 from "@/assets/room-2.jpg";
 import r3 from "@/assets/room-3.jpg";
@@ -12,9 +14,17 @@ import a3 from "@/assets/apt-3.jpg";
 import { useT } from "@/i18n/LanguageContext";
 
 const groupImages = [
-  [c1, c2, c3],
+  [c1.url, c2.url, c3.url, c4.url, c5.url],
   [r1, r2, r3],
   [a1, a2, a3],
+];
+
+const commonAlts = [
+  "Espaço exterior ao anoitecer",
+  "Piscina com vista para o campo",
+  "Sala de estar ampla e luminosa",
+  "Cozinha e sala de refeições",
+  "Mesa de lanche junto à piscina",
 ];
 
 export default function HouseSection() {
@@ -36,7 +46,7 @@ export default function HouseSection() {
 
         <div className="mt-24 space-y-32">
           {t.house.groups.map((g, i) => {
-            const images = groupImages[i].map((src, j) => ({ src, alt: g.alts[j] }));
+            const images = groupImages[i].map((src, j) => ({ src, alt: (i === 0 ? commonAlts[j] : g.alts[j]) ?? g.title }));
             return (
               <div
                 key={g.title}
