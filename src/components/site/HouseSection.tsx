@@ -37,6 +37,8 @@ const commonAlts = [
   "Sala de estar ampla e luminosa",
   "Cozinha e sala de refeições",
   "Mesa de lanche junto à piscina",
+  "Fachada ao anoitecer com escultura iluminada",
+  "Sala de jantar com detalhes decorativos",
 ];
 
 export default function HouseSection() {
