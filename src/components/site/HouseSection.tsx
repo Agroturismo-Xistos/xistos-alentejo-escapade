@@ -39,6 +39,7 @@ const commonAlts = [
   "Piscina com vista para o campo",
   "Sala de estar ampla e luminosa",
   "Cozinha e sala de refeições",
+  "Balanço de madeira junto à piscina",
   "Mesa de lanche junto à piscina",
   "Fachada ao anoitecer com escultura iluminada",
   "Sala de jantar com detalhes decorativos",
