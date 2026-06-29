@@ -12,7 +12,6 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermosECondicoesRouteImport } from './routes/termos-e-condicoes'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as PoliticaDeCookiesRouteImport } from './routes/politica-de-cookies'
-import { Route as LivroDeReclamacoesRouteImport } from './routes/livro-de-reclamacoes'
 import { Route as IndexRouteImport } from './routes/index'
 
 const TermosECondicoesRoute = TermosECondicoesRouteImport.update({
@@ -30,11 +29,6 @@ const PoliticaDeCookiesRoute = PoliticaDeCookiesRouteImport.update({
   path: '/politica-de-cookies',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LivroDeReclamacoesRoute = LivroDeReclamacoesRouteImport.update({
-  id: '/livro-de-reclamacoes',
-  path: '/livro-de-reclamacoes',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -43,14 +37,12 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/livro-de-reclamacoes': typeof LivroDeReclamacoesRoute
   '/politica-de-cookies': typeof PoliticaDeCookiesRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/termos-e-condicoes': typeof TermosECondicoesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/livro-de-reclamacoes': typeof LivroDeReclamacoesRoute
   '/politica-de-cookies': typeof PoliticaDeCookiesRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/termos-e-condicoes': typeof TermosECondicoesRoute
@@ -58,7 +50,6 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/livro-de-reclamacoes': typeof LivroDeReclamacoesRoute
   '/politica-de-cookies': typeof PoliticaDeCookiesRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/termos-e-condicoes': typeof TermosECondicoesRoute
@@ -67,21 +58,18 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/livro-de-reclamacoes'
     | '/politica-de-cookies'
     | '/politica-de-privacidade'
     | '/termos-e-condicoes'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/livro-de-reclamacoes'
     | '/politica-de-cookies'
     | '/politica-de-privacidade'
     | '/termos-e-condicoes'
   id:
     | '__root__'
     | '/'
-    | '/livro-de-reclamacoes'
     | '/politica-de-cookies'
     | '/politica-de-privacidade'
     | '/termos-e-condicoes'
@@ -89,7 +77,6 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  LivroDeReclamacoesRoute: typeof LivroDeReclamacoesRoute
   PoliticaDeCookiesRoute: typeof PoliticaDeCookiesRoute
   PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   TermosECondicoesRoute: typeof TermosECondicoesRoute
@@ -118,13 +105,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PoliticaDeCookiesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/livro-de-reclamacoes': {
-      id: '/livro-de-reclamacoes'
-      path: '/livro-de-reclamacoes'
-      fullPath: '/livro-de-reclamacoes'
-      preLoaderRoute: typeof LivroDeReclamacoesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
@@ -137,7 +117,6 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  LivroDeReclamacoesRoute: LivroDeReclamacoesRoute,
   PoliticaDeCookiesRoute: PoliticaDeCookiesRoute,
   PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   TermosECondicoesRoute: TermosECondicoesRoute,

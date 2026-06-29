@@ -24,12 +24,14 @@ export default function Footer() {
             >
               Termos e Condições
             </Link>
-            <Link
-              to="/livro-de-reclamacoes"
+            <a
+              href="https://www.livroreclamacoes.pt/Inicio/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm uppercase tracking-[0.15em] hover:text-ochre transition-colors"
             >
               Livro de Reclamações
-            </Link>
+            </a>
           </nav>
           <div className="text-sm tracking-wide text-cream/60">
             Número do RNET: 5611
