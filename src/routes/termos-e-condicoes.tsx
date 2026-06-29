@@ -24,49 +24,16 @@ function TermosCondicoesPage() {
         </h1>
         <div className="prose prose-lg max-w-none space-y-6 text-bark/80 leading-relaxed">
           <p>
-            Bem-vindo ao website da Agroturismo Xistos. Ao aceder e utilizar este site, concorda em cumprir e ficar vinculado aos seguintes termos e condições de utilização.
+            O Agro Turismo Xistos utiliza a informação recolhida única e exclusivamente para facilitar o processo de resposta a pedidos de informação submetidos pelos seus clientes.
           </p>
-
-          <h2 className="font-display text-2xl text-olive-deep mt-8 mb-4">
-            Reservas
-          </h2>
           <p>
-            As reservas estão sujeitas a disponibilidade e confirmação. Ao efetuar uma reserva, o cliente compromete-se a fornecer informações verdadeiras e completas. A Agroturismo Xistos reserva-se o direito de cancelar reservas em caso de informações incorretas ou suspeitas de fraude.
+            A informação recolhida é utilizada no processo de adequação da resposta comercial e no âmbito dos serviços prestados pelo Agro Turismo Xistos.
           </p>
-
-          <h2 className="font-display text-2xl text-olive-deep mt-8 mb-4">
-            Cancelamentos
-          </h2>
           <p>
-            As políticas de cancelamento e reembolso variam de acordo com a antecedência do cancelamento e o tipo de reserva. Os termos específicos serão comunicados no momento da reserva.
+            Todos os dados são guardados de forma segura e confidencial, de acordo com as políticas e procedimentos internos de segurança e confidencialidade.
           </p>
-
-          <h2 className="font-display text-2xl text-olive-deep mt-8 mb-4">
-            Comportamento no Alojamento
-          </h2>
           <p>
-            Os hóspedes devem respeitar as regras da casa e a tranquilidade dos restantes hóspedes e vizinhos. É proibido fumar no interior das acomodações e o silêncio deve ser respeitado durante o período noturno.
-          </p>
-
-          <h2 className="font-display text-2xl text-olive-deep mt-8 mb-4">
-            Responsabilidade
-          </h2>
-          <p>
-            A Agroturismo Xistos não se responsabiliza por perdas, danos ou lesões ocorridos durante a estadia, exceto quando resultem de negligência comprovada da nossa parte.
-          </p>
-
-          <h2 className="font-display text-2xl text-olive-deep mt-8 mb-4">
-            Propriedade Intelectual
-          </h2>
-          <p>
-            Todo o conteúdo deste website, incluindo textos, imagens e logótipos, é propriedade da Agroturismo Xistos e está protegido por direitos de autor. A reprodução sem autorização prévia é proibida.
-          </p>
-
-          <h2 className="font-display text-2xl text-olive-deep mt-8 mb-4">
-            Alterações aos Termos
-          </h2>
-          <p>
-            Podemos alterar estes termos e condições a qualquer momento. O utilizador deve consultar esta página regularmente para se manter atualizado.
+            O Agro Turismo Xistos não partilha os dados recolhidos com terceiros.
           </p>
         </div>
       </main>
