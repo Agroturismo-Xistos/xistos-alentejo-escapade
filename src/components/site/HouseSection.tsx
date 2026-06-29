@@ -7,6 +7,7 @@ import c4 from "@/assets/common-4.jpg.asset.json";
 import c5 from "@/assets/common-5.jpg.asset.json";
 import c6 from "@/assets/common-6.jpg.asset.json";
 import c7 from "@/assets/common-7.jpg.asset.json";
+import c8 from "@/assets/common-8.jpg.asset.json";
 import r1 from "@/assets/room-1.jpg.asset.json";
 import r2 from "@/assets/room-2.jpg.asset.json";
 import r3 from "@/assets/room-3.jpg.asset.json";
