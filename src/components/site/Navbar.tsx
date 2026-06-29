@@ -42,8 +42,10 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
+        visible ? "translate-y-0" : "-translate-y-full"
+      } ${
         scrolled
-          ? "bg-ochre-soft/95 backdrop-blur-xl border-b border-bark/10"
+          ? "bg-sand/95 backdrop-blur-xl border-b border-bark/10"
           : "bg-transparent"
       }`}
     >
