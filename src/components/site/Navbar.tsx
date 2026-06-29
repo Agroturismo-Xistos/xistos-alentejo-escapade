@@ -2,7 +2,6 @@ import { useEffect, useState, useRef } from "react";
 import { Menu, X, Phone } from "lucide-react";
 
 import logoLight from "@/assets/logo-light.png.asset.json";
-import logoDark from "@/assets/logo-dark.png.asset.json";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useT } from "@/i18n/LanguageContext";
 
