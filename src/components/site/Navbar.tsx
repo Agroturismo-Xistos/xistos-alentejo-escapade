@@ -63,8 +63,8 @@ export default function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className={`whitespace-nowrap text-[17px] uppercase tracking-[0.18em] font-medium transition-colors relative after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-cream after:transition-all hover:after:w-full ${
-                  scrolled ? "text-cream hover:text-cream/80" : "text-cream/90 hover:text-cream"
+                className={`whitespace-nowrap text-[17px] uppercase tracking-[0.18em] font-medium transition-colors relative after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:transition-all hover:after:w-full ${
+                  scrolled ? "text-bark hover:text-bark/80 after:bg-bark" : "text-cream/90 hover:text-cream after:bg-cream"
                 }`}
               >
                 {l.label}
