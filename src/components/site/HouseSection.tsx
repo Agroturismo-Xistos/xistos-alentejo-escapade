@@ -27,6 +27,7 @@ const groupImages = [
 const roomAlts = [
   "Quarto com vista para a piscina",
   "Exterior dos quartos ao anoitecer",
+  "Varanda do quarto com mesa exterior",
   "Casa de banho dos quartos",
   "Detalhe do quarto com secretária",
   "Quarto duplo acolhedor",
