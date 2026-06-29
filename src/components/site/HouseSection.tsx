@@ -12,6 +12,7 @@ import r2 from "@/assets/room-2.jpg.asset.json";
 import r3 from "@/assets/room-3.jpg.asset.json";
 import r4 from "@/assets/room-4.jpg.asset.json";
 import r5 from "@/assets/room-5.jpg.asset.json";
+import r6 from "@/assets/room-6.jpg.asset.json";
 import a1 from "@/assets/apt-1.jpg";
 import a2 from "@/assets/apt-2.jpg";
 import a3 from "@/assets/apt-3.jpg";
