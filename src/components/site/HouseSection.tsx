@@ -12,6 +12,7 @@ import r2 from "@/assets/room-2.jpg.asset.json";
 import r3 from "@/assets/room-3.jpg.asset.json";
 import r4 from "@/assets/room-4.jpg.asset.json";
 import r5 from "@/assets/room-5.jpg.asset.json";
+import r6 from "@/assets/room-6.jpg.asset.json";
 import a1 from "@/assets/apt-1.jpg";
 import a2 from "@/assets/apt-2.jpg";
 import a3 from "@/assets/apt-3.jpg";
@@ -19,13 +20,14 @@ import { useT } from "@/i18n/LanguageContext";
 
 const groupImages = [
   [c1.url, c2.url, c3.url, c4.url, c5.url, c6.url, c7.url],
-  [r1.url, r2.url, r3.url, r4.url, r5.url],
+  [r1.url, r2.url, r6.url, r3.url, r4.url, r5.url],
   [a1, a2, a3],
 ];
 
 const roomAlts = [
   "Quarto com vista para a piscina",
   "Exterior dos quartos ao anoitecer",
+  "Varanda do quarto com mesa exterior",
   "Casa de banho dos quartos",
   "Detalhe do quarto com secretária",
   "Quarto duplo acolhedor",
