@@ -50,9 +50,6 @@ function Index() {
           <BookingWidget />
         </div>
       </div>
-      <div className="fixed bottom-4 left-4 z-50 flex items-end gap-3 bg-cream/90 backdrop-blur rounded-lg p-2 shadow-lg">
-        <img src={greenKey.url} alt="Green Key" className="h-14 w-auto object-contain" />
-      </div>
       <div className="fixed bottom-4 right-4 z-50 flex items-center gap-2 bg-cream/90 backdrop-blur rounded-full p-2 shadow-lg">
         <a
           href="https://instagram.com/"
