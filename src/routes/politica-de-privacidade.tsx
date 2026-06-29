@@ -24,42 +24,67 @@ function PoliticaPrivacidadePage() {
         </h1>
         <div className="prose prose-lg max-w-none space-y-6 text-bark/80 leading-relaxed">
           <p>
-            A Agroturismo Xistos está empenhada em proteger a privacidade e os dados pessoais dos seus clientes e visitantes. Esta política de privacidade descreve como recolhemos, utilizamos e protegemos as suas informações.
+            O Agro Turismo Xistos compromete-se a assumir e respeitar a Política de Privacidade e Segurança dos dados pessoais dos seus clientes.
+          </p>
+
+          <p>
+            Os dados recolhidos pelo Agro Turismo Xistos têm como objetivo único dar resposta ao sistema de reservas e de faturação. As informações fornecidas pelos clientes destinam-se exclusivamente à prestação de um serviço, de acordo com as necessidades apresentadas pelo cliente.
+          </p>
+
+          <p>
+            Toda a informação necessária para o sistema de pagamento encontra-se protegida e encriptada.
           </p>
 
           <h2 className="font-display text-2xl text-olive-deep mt-8 mb-4">
-            Recolha de Dados
+            Recolha de Dados e Navegação no Website
           </h2>
           <p>
-            Recolhemos dados pessoais apenas quando necessário para prestar os nossos serviços, como nome, contacto e informações de reserva. Estes dados são fornecidos voluntariamente pelo utilizador.
+            O Website do Agro Turismo Xistos não recolhe automaticamente informação pessoal dos utilizadores que não se encontrem registados, permitindo assim uma navegação anónima por parte dos visitantes.
+          </p>
+
+          <p>
+            A recolha de informações através de cookies permite a utilização do Website e tem como finalidade analisar o seu desempenho. Através dos cookies, o Agro Turismo Xistos pretende contabilizar o número de visitas ao Website e compreender a sua utilização.
+          </p>
+
+          <p>
+            Neste processo, o cliente não é identificado, nem a sua informação pessoal é guardada ou recolhida.
+          </p>
+
+          <p>
+            Os utilizadores podem controlar a utilização dos cookies através das definições do seu browser.
           </p>
 
           <h2 className="font-display text-2xl text-olive-deep mt-8 mb-4">
-            Utilização da Informação
+            Aceitação das Condições de Utilização
           </h2>
           <p>
-            Os dados recolhidos são utilizados exclusivamente para gerir reservas, comunicar com os clientes e melhorar a experiência de estadia. Não vendemos, alugamos ou partilhamos os seus dados com terceiros para fins comerciais.
+            Ao aceder ao Website do Agro Turismo Xistos, o utilizador declara ter lido e compreendido os termos acima referidos, comprometendo-se a cumprir todas as regras aplicáveis de acordo com a legislação em vigor.
+          </p>
+
+          <p>
+            O acesso ao Website implica a aceitação das presentes condições de utilização.
+          </p>
+
+          <p>
+            Caso o utilizador não concorde com as condições referidas, agradecemos que não aceda ao Website.
           </p>
 
           <h2 className="font-display text-2xl text-olive-deep mt-8 mb-4">
-            Segurança
+            Direitos de Autor e Propriedade dos Conteúdos
           </h2>
           <p>
-            Implementamos medidas de segurança técnicas e organizacionais para proteger os seus dados contra acesso não autorizado, alteração, divulgação ou destruição.
+            O Agro Turismo Xistos detém a propriedade exclusiva de todos os conteúdos apresentados no Website, incluindo imagens, filmes e textos, nos termos do Código do Direito de Autor.
           </p>
 
           <h2 className="font-display text-2xl text-olive-deep mt-8 mb-4">
-            Os Seus Direitos
+            Contacto
           </h2>
           <p>
-            Tem o direito de aceder, retificar, eliminar ou limitar o tratamento dos seus dados pessoais. Para exercer estes direitos, contacte-nos através dos meios disponíveis no nosso website.
+            O Agro Turismo Xistos encontra-se disponível para o esclarecimento de qualquer dúvida relacionada com esta política.
           </p>
 
-          <h2 className="font-display text-2xl text-olive-deep mt-8 mb-4">
-            Alterações à Política
-          </h2>
           <p>
-            Reservamo-nos o direito de atualizar esta política de privacidade a qualquer momento. As alterações serão publicadas nesta página.
+            Para mais informações, contacte-nos através do email: geral@xistos.pt
           </p>
         </div>
       </main>
