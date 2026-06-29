@@ -20,7 +20,7 @@ import { useT } from "@/i18n/LanguageContext";
 
 const groupImages = [
   [c1.url, c2.url, c3.url, c4.url, c5.url, c6.url, c7.url],
-  [r1.url, r2.url, r3.url, r4.url, r5.url],
+  [r1.url, r2.url, r6.url, r3.url, r4.url, r5.url],
   [a1, a2, a3],
 ];
 
