@@ -10,8 +10,6 @@ import CampaignSection from "@/components/site/CampaignSection";
 import LocationSection from "@/components/site/LocationSection";
 import Footer from "@/components/site/Footer";
 import BookingWidget from "@/components/site/BookingWidget";
-import greenKey from "@/assets/greenkey.png.asset.json";
-import biosphere from "@/assets/biosphere.png.asset.json";
 
 
 
