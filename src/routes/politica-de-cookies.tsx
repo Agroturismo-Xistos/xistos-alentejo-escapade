@@ -23,39 +23,56 @@ function PoliticaCookiesPage() {
           Política de Cookies
         </h1>
         <div className="prose prose-lg max-w-none space-y-6 text-bark/80 leading-relaxed">
+          <h2 className="font-display text-2xl text-olive-deep mt-8 mb-4">
+            Que Tipo de Cookies Utilizamos
+          </h2>
           <p>
-            O website da Agroturismo Xistos utiliza cookies para melhorar a experiência de navegação dos seus utilizadores. Ao continuar a utilizar o nosso site, concorda com a utilização de cookies de acordo com esta política.
+            O Website do Agro Turismo Xistos utiliza cookies analíticos.
+          </p>
+          <p>
+            Os cookies analíticos permitem analisar a forma como os utilizadores interagem com o Website, ajudando-nos a compreender o seu desempenho e a melhorar a experiência de navegação.
+          </p>
+          <p>
+            Para este efeito, utilizamos o Google Analytics, uma ferramenta de análise da Google que ajuda os proprietários de websites e aplicações a compreender como os utilizadores se envolvem com as suas plataformas digitais.
+          </p>
+          <p>
+            O Google Analytics utiliza um conjunto de cookies para recolher informações e estatísticas de utilização do Website, sem identificar pessoalmente os visitantes individuais perante a Google.
           </p>
 
           <h2 className="font-display text-2xl text-olive-deep mt-8 mb-4">
-            O que são Cookies
+            Como Utilizamos os Cookies
           </h2>
           <p>
-            Cookies são pequenos ficheiros de texto que um site coloca no seu dispositivo quando o visita. Permitem que o site se lembre das suas ações e preferências durante um período de tempo, para que não tenha de as reintroduzir sempre que voltar ao site.
+            Utilizamos cookies por várias razões, nomeadamente para permitir o correto funcionamento do Website, melhorar a experiência de utilização e analisar o desempenho das suas páginas.
+          </p>
+          <p>
+            Na maioria dos casos, não existe uma opção padrão para desativar cookies sem desativar por completo as funcionalidades e os recursos que estes adicionam ao Website.
+          </p>
+          <p>
+            Por esse motivo, recomendamos que mantenha os cookies ativos caso não tenha a certeza se necessita ou não deles, uma vez que podem estar associados a funcionalidades utilizadas durante a navegação no nosso Website.
           </p>
 
           <h2 className="font-display text-2xl text-olive-deep mt-8 mb-4">
-            Tipos de Cookies que Utilizamos
+            Desativação de Cookies
           </h2>
           <p>
-            <strong>Cookies essenciais:</strong> Necessários para o funcionamento básico do website, permitindo a navegação e a utilização das suas funcionalidades.
+            O utilizador pode impedir a configuração dos cookies ajustando as definições do seu navegador. Para saber como o fazer, deverá consultar a secção de ajuda do respetivo browser.
           </p>
           <p>
-            <strong>Cookies de desempenho:</strong> Ajuda-nos a compreender como os visitantes interagem com o website, recolhendo informações de forma anónima.
+            No entanto, alertamos que a desativação dos cookies poderá afetar a funcionalidade deste Website, bem como de outros websites que utilize.
           </p>
-
-          <h2 className="font-display text-2xl text-olive-deep mt-8 mb-4">
-            Gestão de Cookies
-          </h2>
           <p>
-            Pode configurar o seu navegador para recusar todos os cookies ou para alertar quando um cookie está a ser enviado. No entanto, algumas funcionalidades do site podem não funcionar corretamente se os cookies estiverem desativados.
+            A desativação dos cookies poderá impedir o correto funcionamento de algumas funcionalidades disponíveis no Website.
           </p>
 
           <h2 className="font-display text-2xl text-olive-deep mt-8 mb-4">
-            Alterações à Política
+            Mais Informações
           </h2>
           <p>
-            Podemos atualizar esta política de cookies periodicamente. Recomendamos que consulte esta página regularmente para se manter informado.
+            Caso exista alguma questão relativamente à utilização de cookies ou caso necessite de mais informações, poderá entrar em contacto connosco através do seguinte email:
+          </p>
+          <p>
+            <a href="mailto:geral@xistos.pt" className="text-olive-deep underline hover:text-bark transition-colors">geral@xistos.pt</a>
           </p>
         </div>
       </main>
