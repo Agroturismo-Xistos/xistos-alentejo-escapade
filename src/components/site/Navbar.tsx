@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Menu, X, Phone } from "lucide-react";
 
 import logoLight from "@/assets/logo-light.png.asset.json";
@@ -8,7 +8,9 @@ import { useT } from "@/i18n/LanguageContext";
 export default function Navbar() {
   const t = useT();
   const [scrolled, setScrolled] = useState(false);
+  const [visible, setVisible] = useState(true);
   const [open, setOpen] = useState(false);
+  const lastScrollY = useRef(0);
 
   const links = [
     { href: "#casa", label: t.nav.house },
@@ -20,7 +22,18 @@ export default function Navbar() {
   ];
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      setScrolled(currentY > 40);
+      if (currentY <= 40) {
+        setVisible(true);
+      } else if (currentY < lastScrollY.current) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+      lastScrollY.current = currentY;
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -29,8 +42,10 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
+        visible ? "translate-y-0" : "-translate-y-full"
+      } ${
         scrolled
-          ? "bg-ochre-soft/95 backdrop-blur-xl border-b border-bark/10"
+          ? "bg-sand/95 backdrop-blur-xl border-b border-bark/10"
           : "bg-transparent"
       }`}
     >
@@ -48,8 +63,8 @@ export default function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className={`whitespace-nowrap text-[17px] uppercase tracking-[0.18em] font-medium transition-colors relative after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:bg-cream after:transition-all hover:after:w-full ${
-                  scrolled ? "text-cream hover:text-cream/80" : "text-cream/90 hover:text-cream"
+                className={`whitespace-nowrap text-[17px] uppercase tracking-[0.18em] font-medium transition-colors relative after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:transition-all hover:after:w-full ${
+                  scrolled ? "text-bark hover:text-bark/80 after:bg-bark" : "text-cream/90 hover:text-cream after:bg-cream"
                 }`}
               >
                 {l.label}
@@ -65,7 +80,7 @@ export default function Navbar() {
           <a
             href="tel:+351964814928"
             className={`hidden md:inline-flex items-center gap-2 text-[17px] uppercase tracking-[0.18em] font-medium transition-colors ${
-              scrolled ? "text-cream hover:text-cream/80" : "text-cream/90 hover:text-cream"
+              scrolled ? "text-bark hover:text-bark/80" : "text-cream/90 hover:text-cream"
             }`}
           >
             <Phone className="h-5 w-5" />
