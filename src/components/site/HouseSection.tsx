@@ -17,12 +17,14 @@ import r5 from "@/assets/room-5.jpg.asset.json";
 import r6 from "@/assets/room-6.jpg.asset.json";
 import a1 from "@/assets/apartamento-1.jpg.asset.json";
 import a2 from "@/assets/apartamento-2.jpg.asset.json";
+import a3 from "@/assets/apartamento-3.jpg.asset.json";
+import a4 from "@/assets/apartamento-4.jpg.asset.json";
 import { useT } from "@/i18n/LanguageContext";
 
 const groupImages = [
   [c1.url, c2.url, c3.url, c4.url, c8.url, c5.url, c6.url, c7.url, c9.url],
   [r1.url, r2.url, r6.url, r3.url, r4.url, r5.url],
-  [a1.url, a2.url],
+  [a1.url, a3.url, a4.url, a2.url],
 ];
 
 const roomAlts = [
