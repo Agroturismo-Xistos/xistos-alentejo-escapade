@@ -1,31 +1,31 @@
 import SectionHeading from "./SectionHeading";
 import ImageCarousel from "./ImageCarousel";
-import c1 from "@/assets/common-1.jpg.asset.json";
-import c2 from "@/assets/common-2.jpg.asset.json";
-import c3 from "@/assets/common-3.jpg.asset.json";
-import c4 from "@/assets/common-4.jpg.asset.json";
+import c1 from "@/assets/common-1.jpg";
+import c2 from "@/assets/common-pool.jpg";
+import c3 from "@/assets/common-living.jpg";
+import c4 from "@/assets/common-kitchen.jpg";
 // Galeria de imagens do apartamento, atualizada com novos assets
-import c5 from "@/assets/common-5.jpg.asset.json";
-import c6 from "@/assets/common-6.jpg.asset.json";
-import c7 from "@/assets/common-7.jpg.asset.json";
-import c8 from "@/assets/common-8.jpg.asset.json";
-import c9 from "@/assets/common-9.jpg.asset.json";
-import r1 from "@/assets/room-1.jpg.asset.json";
-import r2 from "@/assets/room-2.jpg.asset.json";
-import r3 from "@/assets/room-3.jpg.asset.json";
-import r4 from "@/assets/room-4.jpg.asset.json";
-import r5 from "@/assets/room-5.jpg.asset.json";
-import r6 from "@/assets/room-6.jpg.asset.json";
-import a1 from "@/assets/apartamento-1.jpg.asset.json";
-import a2 from "@/assets/apartamento-2.jpg.asset.json";
-import a3 from "@/assets/apartamento-3.jpg.asset.json";
-import a4 from "@/assets/apartamento-4.jpg.asset.json";
+import c5 from "@/assets/common-pool-snack.jpg";
+import c6 from "@/assets/common-6.jpg";
+import c7 from "@/assets/common-7.jpg";
+import c8 from "@/assets/common-8.jpg";
+import c9 from "@/assets/common-9.jpg";
+import r1 from "@/assets/room-1.jpg";
+import r2 from "@/assets/room-2.jpg";
+import r3 from "@/assets/room-3.jpg";
+import r4 from "@/assets/room-4.jpg";
+import r5 from "@/assets/room-5.jpg";
+import r6 from "@/assets/room-6.jpg";
+import a1 from "@/assets/apartamento-1.jpg";
+import a2 from "@/assets/apartamento-2.jpg";
+import a3 from "@/assets/apartamento-3.jpg";
+import a4 from "@/assets/apartamento-4.jpg";
 import { useT } from "@/i18n/LanguageContext";
 
 const groupImages = [
-  [c1.url, c2.url, c3.url, c4.url, c8.url, c5.url, c6.url, c7.url, c9.url],
-  [r1.url, r2.url, r6.url, r3.url, r4.url, r5.url],
-  [a1.url, a3.url, a4.url, a2.url],
+  [c1, c2, c3, c4, c8, c5, c6, c7, c9],
+  [r1, r2, r6, r3, r4, r5],
+  [a1, a3, a4, a2],
 ];
 
 const roomAlts = [
