@@ -23,9 +23,9 @@ import a4 from "@/assets/apartamento-4.jpg";
 import { useT } from "@/i18n/LanguageContext";
 
 const groupImages = [
-  [c1.url, c2.url, c3.url, c4.url, c8.url, c5.url, c6.url, c7.url, c9.url],
-  [r1.url, r2.url, r6.url, r3.url, r4.url, r5.url],
-  [a1.url, a3.url, a4.url, a2.url],
+  [c1, c2, c3, c4, c8, c5, c6, c7, c9],
+  [r1, r2, r6, r3, r4, r5],
+  [a1, a3, a4, a2],
 ];
 
 const roomAlts = [
