@@ -4,6 +4,7 @@ import c1 from "@/assets/common-1.jpg.asset.json";
 import c2 from "@/assets/common-2.jpg.asset.json";
 import c3 from "@/assets/common-3.jpg.asset.json";
 import c4 from "@/assets/common-4.jpg.asset.json";
+// Galeria de imagens do apartamento, atualizada com novos assets
 import c5 from "@/assets/common-5.jpg.asset.json";
 import c6 from "@/assets/common-6.jpg.asset.json";
 import c7 from "@/assets/common-7.jpg.asset.json";
