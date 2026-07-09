@@ -52,7 +52,7 @@ export default function Navbar() {
       <nav className="w-full px-6 md:px-10 grid grid-cols-3 items-center h-28 md:h-32">
         <a href="#inicio" className="flex items-center gap-3 shrink-0 justify-self-start">
           <img
-            src={logoLight.url}
+            src={logoLight}
             alt="Agroturismo Xistos"
             className="h-16 md:h-20 w-auto transition-opacity duration-300"
           />
