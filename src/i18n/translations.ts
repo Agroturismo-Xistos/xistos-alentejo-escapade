@@ -61,7 +61,7 @@ const pt: Dict = {
     groups: [
       { title: "Espaços Comuns", desc: "Salas, exteriores e zonas de convívio onde o tempo se demora.", alts: ["Sala comum com lareira", "Pátio exterior com mesa de madeira", "Jardim com rede de descanso"] },
       { title: "Quartos", desc: "Conforto sereno, decoração natural e o silêncio do campo.", alts: ["Quarto com dossel e madeiras", "Quarto com parede de pedra e vista", "Casa de banho rústica"] },
-      { title: "Apartamento", desc: "Casa completa para estadias mais longas, com cozinha e sala.Casa completa para estadias mais longas, com cozinha e sala.", alts: ["Cozinha e sala do apartamento", "Quarto do apartamento", "Sala do apartamento com pedra"] },
+      { title: "Apartamento", desc: "Casa completa para estadias mais longas, com cozinha e sala.", alts: ["Cozinha e sala do apartamento", "Quarto do apartamento", "Sala do apartamento com pedra"] },
     ],
   },
   purpose: {
