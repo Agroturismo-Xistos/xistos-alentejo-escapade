@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermosECondicoesRouteImport } from './routes/termos-e-condicoes'
+import { Route as ReservasRouteImport } from './routes/reservas'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as PoliticaDeCookiesRouteImport } from './routes/politica-de-cookies'
 import { Route as IndexRouteImport } from './routes/index'
@@ -17,6 +18,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const TermosECondicoesRoute = TermosECondicoesRouteImport.update({
   id: '/termos-e-condicoes',
   path: '/termos-e-condicoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReservasRoute = ReservasRouteImport.update({
+  id: '/reservas',
+  path: '/reservas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
@@ -39,12 +45,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/politica-de-cookies': typeof PoliticaDeCookiesRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/reservas': typeof ReservasRoute
   '/termos-e-condicoes': typeof TermosECondicoesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/politica-de-cookies': typeof PoliticaDeCookiesRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/reservas': typeof ReservasRoute
   '/termos-e-condicoes': typeof TermosECondicoesRoute
 }
 export interface FileRoutesById {
@@ -52,6 +60,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/politica-de-cookies': typeof PoliticaDeCookiesRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/reservas': typeof ReservasRoute
   '/termos-e-condicoes': typeof TermosECondicoesRoute
 }
 export interface FileRouteTypes {
@@ -60,18 +69,21 @@ export interface FileRouteTypes {
     | '/'
     | '/politica-de-cookies'
     | '/politica-de-privacidade'
+    | '/reservas'
     | '/termos-e-condicoes'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/politica-de-cookies'
     | '/politica-de-privacidade'
+    | '/reservas'
     | '/termos-e-condicoes'
   id:
     | '__root__'
     | '/'
     | '/politica-de-cookies'
     | '/politica-de-privacidade'
+    | '/reservas'
     | '/termos-e-condicoes'
   fileRoutesById: FileRoutesById
 }
@@ -79,6 +91,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   PoliticaDeCookiesRoute: typeof PoliticaDeCookiesRoute
   PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
+  ReservasRoute: typeof ReservasRoute
   TermosECondicoesRoute: typeof TermosECondicoesRoute
 }
 
@@ -89,6 +102,13 @@ declare module '@tanstack/react-router' {
       path: '/termos-e-condicoes'
       fullPath: '/termos-e-condicoes'
       preLoaderRoute: typeof TermosECondicoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reservas': {
+      id: '/reservas'
+      path: '/reservas'
+      fullPath: '/reservas'
+      preLoaderRoute: typeof ReservasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/politica-de-privacidade': {
@@ -119,8 +139,19 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   PoliticaDeCookiesRoute: PoliticaDeCookiesRoute,
   PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
+  ReservasRoute: ReservasRoute,
   TermosECondicoesRoute: TermosECondicoesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

@@ -79,14 +79,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Agroturismo Xistos | Herdade Monte da Ponte" },
+      { name: "description", content: "O Agro Turismo Xistos é uma forma de estar na vida, premeia a mensagem para a sustentabilidade ! Saber Mais. Campanhas. Para todos os tipos de turistas nómadas ..." },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+      { name: "author", content: "Agroturismo Xistos" },
+      { property: "og:title", content: "Agroturismo Xistos" },
+      { property: "og:description", content: "O Agro Turismo Xistos é uma forma de estar na vida, premeia a mensagem para a sustentabilidade ! Saber Mais. Campanhas. Para todos os tipos de turistas nómadas ..." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:url", content: "https://www.xistos.pt/" },
+      { property: "og:site_name", content: "Agroturismo Xistos" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Agroturismo Xistos" },
+      { name: "twitter:description", content: "O Agro Turismo Xistos é uma forma de estar na vida, premeia a mensagem para a sustentabilidade ! Saber Mais. Campanhas. Para todos os tipos de turistas nómadas ..." },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -106,7 +110,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt">
       <head>
         <HeadContent />
       </head>

@@ -16,19 +16,90 @@ import BookingWidget from "@/components/site/BookingWidget";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Agroturismo Xistos · Refúgio no Alentejo, Beja" },
+      { title: "Agroturismo Xistos" },
       {
         name: "description",
         content:
-          "Agroturismo Xistos — um refúgio rural no coração do Alentejo, entre Beja e Mértola. Natureza, experiências autênticas e estadias memoráveis.",
+          "O Agro Turismo Xistos é uma forma de estar na vida, premeia a mensagem para a sustentabilidade ! Saber Mais. Campanhas. Para todos os tipos de turistas nómadas ...",
       },
-      { property: "og:title", content: "Agroturismo Xistos · Refúgio no Alentejo" },
+      { property: "og:title", content: "Agroturismo Xistos" },
       {
         property: "og:description",
-        content: "Natureza, calma e autenticidade no coração do Alentejo. Reserve a sua estadia.",
+        content: "O Agro Turismo Xistos é uma forma de estar na vida, premeia a mensagem para a sustentabilidade ! Saber Mais. Campanhas. Para todos os tipos de turistas nómadas ...",
       },
       { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "Agroturismo Xistos" },
+      {
+        name: "twitter:description",
+        content: "O Agro Turismo Xistos é uma forma de estar na vida, premeia a mensagem para a sustentabilidade ! Saber Mais. Campanhas. Para todos os tipos de turistas nómadas ...",
+      },
     ],
+    links: [
+      { rel: "canonical", href: "https://www.xistos.pt/" }
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "LodgingBusiness",
+              "name": "Agroturismo Xistos Herdade Monte da Ponte",
+              "image": "https://www.xistos.pt/logo.png",
+              "description": "O Agro Turismo Xistos é uma forma de estar na vida, premeia a mensagem para a sustentabilidade ! Saber Mais. Campanhas. Para todos os tipos de turistas nómadas ...",
+              "url": "https://www.xistos.pt/",
+              "telephone": "+351964814928",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Herdade Monte da Ponte - Estrada Nacional 122, Km 18",
+                "addressLocality": "Trindade",
+                "postalCode": "7800-786",
+                "addressRegion": "Beja",
+                "addressCountry": "PT"
+              },
+              "priceRange": "€€",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.5",
+                "reviewCount": "45"
+              }
+            },
+            {
+              "@type": "WebSite",
+              "name": "Agroturismo Xistos",
+              "url": "https://www.xistos.pt/",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.xistos.pt/?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "O que é xisto?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "O xisto é uma rocha metamórfica com forte foliação, muito comum na região do Alentejo, e que dá nome ao nosso Agroturismo pelas suas características únicas e forte presença na nossa paisagem e construções."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Quais são as propriedades do xisto?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "O xisto possui alta resistência, impermeabilidade e propriedades térmicas excelentes, sendo tradicionalmente usado na arquitetura alentejana para manter as casas frescas no verão e isoladas no inverno."
+                  }
+                }
+              ]
+            }
+          ]
+        })
+      }
+    ]
   }),
   component: Index,
 });
