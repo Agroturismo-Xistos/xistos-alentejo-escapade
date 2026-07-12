@@ -8,6 +8,7 @@ import NatureSection from "@/components/site/NatureSection";
 import ActivitiesSection from "@/components/site/ActivitiesSection";
 import CampaignSection from "@/components/site/CampaignSection";
 import LocationSection from "@/components/site/LocationSection";
+import ContactSection from "@/components/site/ContactSection";
 
 import BookingWidget from "@/components/site/BookingWidget";
 import { useBookingModal } from "@/components/site/BookingModalProvider";
@@ -131,6 +132,7 @@ function Index() {
       <ActivitiesSection />
       <CampaignSection />
       <LocationSection />
+      <ContactSection />
       <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[min(100%-1rem,56rem)] px-2 pointer-events-none">
         <div className="pointer-events-auto">
           <BookingWidget />

@@ -39,6 +39,14 @@ export type Dict = {
     distances: { km: string; to: string }[];
     addressLabel: string; openMaps: string; mapTitle: string;
   };
+  contact: {
+    eyebrow: string; title: string; subtitle: string;
+    nameLabel: string; namePlaceholder: string;
+    subjectLabel: string; subjectPlaceholder: string;
+    messageLabel: string; messagePlaceholder: string;
+    sendButton: string;
+    whatsappGreeting: string; whatsappSubject: string;
+  };
   footer: { tagline: string; contacts: string; phoneLabel: string; nav: string; copyright: string; signoff: string };
   whatsapp: { aria: string; defaultMsg: string };
   booking: {
@@ -145,6 +153,14 @@ const pt: Dict = {
       { km: "35", to: "kms de Mértola" },
     ],
     addressLabel: "Morada", openMaps: "Abrir no Google Maps", mapTitle: "Mapa Agroturismo Xistos",
+  },
+  contact: {
+    eyebrow: "Contactos", title: "Fale Connosco", subtitle: "Tem alguma dúvida ou pedido especial? Envie-nos uma mensagem diretamente e responderemos o mais breve possível.",
+    nameLabel: "O seu Nome", namePlaceholder: "Introduza o seu nome",
+    subjectLabel: "Assunto", subjectPlaceholder: "Qual é o motivo do contacto?",
+    messageLabel: "Mensagem", messagePlaceholder: "Como podemos ajudar?",
+    sendButton: "Enviar para o WhatsApp",
+    whatsappGreeting: "Olá, sou", whatsappSubject: "Assunto:",
   },
   footer: {
     tagline: "Um refúgio no Alentejo para viver a natureza com tempo, calma e autenticidade.",
@@ -257,6 +273,14 @@ const en: Dict = {
     ],
     addressLabel: "Address", openMaps: "Open in Google Maps", mapTitle: "Agroturismo Xistos Map",
   },
+  contact: {
+    eyebrow: "Contacts", title: "Talk to Us", subtitle: "Do you have any questions or special requests? Send us a message directly and we will reply as soon as possible.",
+    nameLabel: "Your Name", namePlaceholder: "Enter your name",
+    subjectLabel: "Subject", subjectPlaceholder: "What is the reason for contacting us?",
+    messageLabel: "Message", messagePlaceholder: "How can we help you?",
+    sendButton: "Send to WhatsApp",
+    whatsappGreeting: "Hello, I am", whatsappSubject: "Subject:",
+  },
   footer: {
     tagline: "A retreat in the Alentejo to live nature with time, calm and authenticity.",
     contacts: "Contacts", phoneLabel: "Phone / WhatsApp", nav: "Navigation",
@@ -368,6 +392,14 @@ const fr: Dict = {
     ],
     addressLabel: "Adresse", openMaps: "Ouvrir dans Google Maps", mapTitle: "Carte Agroturismo Xistos",
   },
+  contact: {
+    eyebrow: "Contacts", title: "Parlez-nous", subtitle: "Avez-vous des questions ou des demandes particulières ? Envoyez-nous un message directement et nous vous répondrons dans les plus brefs délais.",
+    nameLabel: "Votre Nom", namePlaceholder: "Entrez votre nom",
+    subjectLabel: "Sujet", subjectPlaceholder: "Quelle est la raison de votre contact ?",
+    messageLabel: "Message", messagePlaceholder: "Comment pouvons-nous vous aider ?",
+    sendButton: "Envoyer sur WhatsApp",
+    whatsappGreeting: "Bonjour, je suis", whatsappSubject: "Sujet :",
+  },
   footer: {
     tagline: "Un refuge en Alentejo pour vivre la nature avec temps, calme et authenticité.",
     contacts: "Contacts", phoneLabel: "Téléphone / WhatsApp", nav: "Navigation",
@@ -478,6 +510,14 @@ const es: Dict = {
       { km: "35", to: "km desde Mértola" },
     ],
     addressLabel: "Dirección", openMaps: "Abrir en Google Maps", mapTitle: "Mapa Agroturismo Xistos",
+  },
+  contact: {
+    eyebrow: "Contactos", title: "Hable con nosotros", subtitle: "¿Tiene alguna duda o solicitud especial? Envíenos un mensaje directamente y le responderemos lo antes posible.",
+    nameLabel: "Su Nombre", namePlaceholder: "Introduzca su nombre",
+    subjectLabel: "Asunto", subjectPlaceholder: "¿Cuál es el motivo de su contacto?",
+    messageLabel: "Mensaje", messagePlaceholder: "¿Cómo podemos ayudarle?",
+    sendButton: "Enviar a WhatsApp",
+    whatsappGreeting: "Hola, soy", whatsappSubject: "Asunto:",
   },
   footer: {
     tagline: "Un refugio en el Alentejo para vivir la naturaleza con tiempo, calma y autenticidad.",

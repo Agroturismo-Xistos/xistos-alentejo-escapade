@@ -4,7 +4,7 @@ import { useT } from "@/i18n/LanguageContext";
 
 const ADDRESS = "Herdade Monte da Ponte - Estrada Nacional 122, Km 18 - Trindade, 7800-786 Beja";
 const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADDRESS)}`;
-const EMBED = `https://www.google.com/maps?q=${encodeURIComponent(ADDRESS)}&output=embed`;
+const EMBED = `https://www.google.com/maps?q=${encodeURIComponent(ADDRESS)}&z=11&output=embed`;
 
 export default function LocationSection() {
   const t = useT();
