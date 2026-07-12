@@ -25,7 +25,7 @@ export const Route = createFileRoute("/reservas")({
 function ReservasPage() {
   return (
     <main className="bg-background text-foreground min-h-screen flex flex-col pt-32">
-      <Navbar />
+      <Navbar alwaysDark />
       
       <div className="flex-1 w-full max-w-7xl mx-auto px-4 md:px-8 pb-20">
         <div className="text-center mb-12">

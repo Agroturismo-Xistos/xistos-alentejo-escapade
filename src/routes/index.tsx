@@ -10,8 +10,8 @@ import CampaignSection from "@/components/site/CampaignSection";
 import LocationSection from "@/components/site/LocationSection";
 
 import BookingWidget from "@/components/site/BookingWidget";
-
-
+import { useBookingModal } from "@/components/site/BookingModalProvider";
+import { useEffect } from "react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -105,6 +105,22 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const { openModal } = useBookingModal();
+
+  useEffect(() => {
+    // Check if the modal has already been shown in this session to avoid annoying the user on every return
+    const hasSeenModal = sessionStorage.getItem("hasSeenBookingModal");
+    if (!hasSeenModal) {
+      const timer = setTimeout(() => {
+        if (window.innerWidth >= 768) {
+          openModal();
+          sessionStorage.setItem("hasSeenBookingModal", "true");
+        }
+      }, 15000);
+      return () => clearTimeout(timer);
+    }
+  }, [openModal]);
+
   return (
     <main className="bg-background text-foreground">
       <Navbar />
@@ -120,7 +136,7 @@ function Index() {
           <BookingWidget />
         </div>
       </div>
-      <div className="fixed bottom-4 right-4 z-50 flex items-center gap-2 bg-cream/90 backdrop-blur rounded-full p-2 shadow-lg">
+      <div className="fixed bottom-20 md:bottom-4 right-4 z-50 flex items-center gap-2 bg-cream/90 backdrop-blur rounded-full p-2 shadow-lg">
         <a
           href="https://instagram.com/"
           target="_blank"

@@ -2,10 +2,11 @@ import { useEffect, useState, useRef } from "react";
 import { Menu, X, Phone } from "lucide-react";
 
 import logoLight from "@/assets/logo-light.png";
+import logoDark from "@/assets/xistos-logo-dark.png";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useT } from "@/i18n/LanguageContext";
 
-export default function Navbar() {
+export default function Navbar({ alwaysDark = false }: { alwaysDark?: boolean }) {
   const t = useT();
   const [scrolled, setScrolled] = useState(false);
   const [visible, setVisible] = useState(true);
@@ -39,32 +40,35 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const isDark = alwaysDark || scrolled;
+
   return (
-    <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        visible ? "translate-y-0" : "-translate-y-full"
-      } ${
-        scrolled
-          ? "bg-sand/95 backdrop-blur-xl border-b border-bark/10"
-          : "bg-transparent"
-      }`}
-    >
-      <nav className="w-full px-6 md:px-10 grid grid-cols-3 items-center h-28 md:h-32">
-        <a href="#inicio" className="flex items-center gap-3 shrink-0 justify-self-start">
+    <>
+      <header
+        className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
+          visible ? "translate-y-0" : "-translate-y-full"
+        } ${
+          isDark
+            ? "bg-sand/95 backdrop-blur-xl border-b border-bark/10"
+            : "bg-transparent"
+        }`}
+      >
+        <nav className="w-full px-6 md:px-10 flex justify-between lg:grid lg:grid-cols-3 items-center h-28 md:h-32">
+        <a href="/" className="flex items-center gap-3 shrink-0 lg:justify-self-start">
           <img
-            src={logoLight}
+            src={isDark ? logoDark : logoLight}
             alt="Agroturismo Xistos"
             className="h-16 md:h-20 w-auto transition-opacity duration-300"
           />
         </a>
 
-        <ul className="hidden lg:flex items-center justify-center gap-8 xl:gap-12 justify-self-center">
+        <ul className="hidden lg:flex items-center justify-center gap-8 xl:gap-12 lg:justify-self-center">
           {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
                 className={`whitespace-nowrap text-[17px] uppercase tracking-[0.18em] font-medium transition-colors relative after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:transition-all hover:after:w-full ${
-                  scrolled ? "text-bark hover:text-bark/80 after:bg-bark" : "text-cream/90 hover:text-cream after:bg-cream"
+                  isDark ? "text-bark hover:text-bark/80 after:bg-bark" : "text-cream/90 hover:text-cream after:bg-cream"
                 }`}
               >
                 {l.label}
@@ -73,14 +77,14 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-4 justify-self-end">
+        <div className="flex items-center gap-4 lg:justify-self-end">
           <div className="hidden md:block">
-            <LanguageSwitcher light />
+            <LanguageSwitcher light={!isDark} />
           </div>
           <a
             href="tel:+351964814928"
             className={`hidden md:inline-flex items-center gap-2 text-[17px] uppercase tracking-[0.18em] font-medium transition-colors ${
-              scrolled ? "text-bark hover:text-bark/80" : "text-cream/90 hover:text-cream"
+              isDark ? "text-bark hover:text-bark/80" : "text-cream/90 hover:text-cream"
             }`}
           >
             <Phone className="h-5 w-5" />
@@ -89,13 +93,14 @@ export default function Navbar() {
 
           <button
             aria-label={t.nav.openMenu}
-            className={`lg:hidden p-2 ${scrolled ? "text-bark" : "text-cream"}`}
+            className={`lg:hidden p-2 ${isDark ? "text-bark" : "text-cream"}`}
             onClick={() => setOpen(true)}
           >
             <Menu className="h-7 w-7" />
           </button>
         </div>
       </nav>
+      </header>
 
       {/* Mobile drawer */}
       <div
@@ -132,6 +137,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </header>
+    </>
   );
 }
