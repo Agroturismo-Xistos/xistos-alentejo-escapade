@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { LanguageProvider } from "@/i18n/LanguageContext";
 import Footer from "@/components/site/Footer";
 import { BookingModalProvider } from "@/components/site/BookingModalProvider";
+import { MetaPixelTracker } from "@/components/MetaPixelTracker";
 
 function NotFoundComponent() {
   return (
@@ -116,6 +117,15 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src="https://www.facebook.com/tr?id=1736146623585992&ev=PageView&noscript=1"
+            alt=""
+          />
+        </noscript>
         {children}
         <Scripts />
       </body>
@@ -130,6 +140,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
         <BookingModalProvider>
+          <MetaPixelTracker />
           {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
           <Outlet />
           <Footer />

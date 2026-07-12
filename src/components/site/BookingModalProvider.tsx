@@ -2,6 +2,7 @@ import { createContext, useContext, useState, ReactNode } from "react";
 import { format } from "date-fns";
 import type { DateRange } from "react-day-picker";
 import { X } from "lucide-react";
+import { trackBookingIntent } from "@/lib/metaPixel";
 
 interface BookingModalContextType {
   isOpen: boolean;
@@ -16,6 +17,8 @@ export function BookingModalProvider({ children }: { children: ReactNode }) {
   const [iframeUrl, setIframeUrl] = useState("https://agroturismo-xistos.amenitiz.io/pt/booking/room#DatesGuests-BE");
 
   const openModal = (params?: { range?: DateRange; adults?: number; children?: number; promo?: string }) => {
+    trackBookingIntent();
+    
     let url = "https://agroturismo-xistos.amenitiz.io/pt/booking/room";
     
     const query = new URLSearchParams();

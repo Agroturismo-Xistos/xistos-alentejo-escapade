@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import Navbar from "@/components/site/Navbar";
+import { trackMetaEvent, trackBookingIntent } from "@/lib/metaPixel";
 
 export const Route = createFileRoute("/reservas")({
   head: () => ({
@@ -23,6 +25,14 @@ export const Route = createFileRoute("/reservas")({
 });
 
 function ReservasPage() {
+  useEffect(() => {
+    trackMetaEvent("ViewContent", {
+      content_name: "Página de reservas",
+      content_category: "Alojamento",
+      content_type: "destination"
+    });
+  }, []);
+
   return (
     <main className="bg-background text-foreground min-h-screen flex flex-col pt-32">
       <Navbar alwaysDark />
@@ -54,6 +64,7 @@ function ReservasPage() {
             href="https://agroturismo-xistos.amenitiz.io/pt/booking/room#DatesGuests-BE"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackBookingIntent("/reservas")}
             className="inline-flex items-center justify-center rounded-full bg-olive-deep px-6 py-3 text-sm font-medium text-cream hover:bg-ochre transition-colors"
           >
             Abrir reservas numa nova janela
