@@ -1,14 +1,25 @@
+import { useEffect, useState } from "react";
 import hero from "@/assets/hero.jpg";
-import heroVideo from "@/assets/hero.mp4.asset.json";
+import mobileVideo from "@/assets/1.Reels_LongaDuracao.mp4";
+import desktopVideo from "@/assets/2.Filme_TurismoLongaDuracao.mp4";
 import { useT } from "@/i18n/LanguageContext";
 
 export default function Hero() {
   const t = useT();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile(); // Check immediately on mount
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <video
-        src={heroVideo.url}
+        key={isMobile ? "mobile" : "desktop"}
+        src={isMobile ? mobileVideo : desktopVideo}
         poster={hero}
         autoPlay
         muted
