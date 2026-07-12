@@ -48,7 +48,7 @@ export default function LocationSection() {
           </div>
 
           <div className="lg:col-span-7">
-            <div className="relative rounded-3xl overflow-hidden shadow-card aspect-[4/3] lg:aspect-auto lg:h-full min-h-[420px] border border-border">
+            <div className="relative w-full rounded-3xl overflow-hidden shadow-card aspect-square md:aspect-[4/3] lg:aspect-auto lg:h-full lg:min-h-[420px] border border-border">
               <iframe
                 title={t.location.mapTitle}
                 src={EMBED}
