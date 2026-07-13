@@ -4,7 +4,7 @@ import { useT } from "@/i18n/LanguageContext";
 export default function PurposeSection() {
   const t = useT();
   return (
-    <section id="proposito" className="relative py-32 md:py-48 overflow-hidden bg-sand/40">
+    <section id="proposito" className="relative py-16 md:py-24 overflow-hidden bg-sand/40">
       <div className="mx-auto max-w-[1400px] px-6 md:px-12 grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
         <div className="lg:col-span-7">
           <span className="inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.4em] text-ochre">

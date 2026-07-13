@@ -104,7 +104,7 @@ export default function ActivitiesSection() {
   const labels = { prev: t.activities.prevImg, next: t.activities.nextImg, goTo: t.activities.goToImg, image: t.activities.imageLabel };
 
   return (
-    <section id="atividades" className="py-28 md:py-40 bg-cream">
+    <section id="atividades" className="py-16 md:py-24 bg-cream">
       <div className="mx-auto max-w-[1400px] px-6 md:px-12">
         <SectionHeading
           align="left"
@@ -113,7 +113,7 @@ export default function ActivitiesSection() {
           subtitle={t.activities.subtitle}
         />
 
-        <div className="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {t.activities.cards.map((a, i) => (
             <article
               key={a.title}

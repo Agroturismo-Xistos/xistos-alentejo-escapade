@@ -9,7 +9,7 @@ const EMBED = `https://www.google.com/maps?q=${encodeURIComponent(ADDRESS)}&z=11
 export default function LocationSection() {
   const t = useT();
   return (
-    <section id="localizacao" className="py-24 md:py-32 bg-sand/60">
+    <section id="localizacao" className="py-16 md:py-24 bg-sand/60">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
           eyebrow={t.location.eyebrow}
@@ -17,7 +17,7 @@ export default function LocationSection() {
           subtitle={t.location.subtitle}
         />
 
-        <div className="mt-16 grid lg:grid-cols-12 gap-10">
+        <div className="mt-12 grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-5 space-y-8">
             <div className="grid grid-cols-2 gap-4">
               {t.location.distances.map((d) => (

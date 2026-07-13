@@ -23,7 +23,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contactos" className="py-24 md:py-32 bg-cream">
+    <section id="contactos" className="py-16 md:py-24 bg-cream">
       <div className="mx-auto max-w-4xl px-6">
         <SectionHeading
           eyebrow={t.contact.eyebrow}
@@ -31,7 +31,7 @@ export default function ContactSection() {
           subtitle={t.contact.subtitle}
         />
 
-        <div className="mt-16 bg-white rounded-3xl p-8 md:p-12 shadow-soft border border-border">
+        <div className="mt-12 bg-white rounded-3xl p-8 md:p-12 shadow-soft border border-border">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-olive-deep mb-2">
