@@ -77,10 +77,10 @@ export default function HouseSection() {
                   i % 2 === 1 ? "lg:[&>div:first-child]:order-2" : ""
                 }`}
               >
-                <div className="lg:col-span-8">
+                <div className="lg:col-span-8 order-2 lg:order-none">
                   <ImageCarousel images={images} />
                 </div>
-                <div className="lg:col-span-4">
+                <div className="lg:col-span-4 order-1 lg:order-none">
                   <span className="font-display italic text-ochre text-2xl">— 0{i + 1}</span>
                   <h3 className="mt-4 font-display font-light text-5xl md:text-6xl text-olive-deep leading-[0.95] tracking-[-0.02em]">
                     {g.title}
