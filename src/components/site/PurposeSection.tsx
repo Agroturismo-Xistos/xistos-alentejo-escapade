@@ -6,16 +6,6 @@ export default function PurposeSection() {
   return (
     <section id="proposito" className="relative py-32 md:py-48 overflow-hidden bg-sand/40">
       <div className="mx-auto max-w-[1400px] px-6 md:px-12 grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-        <div className="lg:col-span-5 relative">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
-            <img src={bg} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
-            <div className="absolute inset-0 bg-bark/15" />
-          </div>
-          <div className="absolute -bottom-6 -right-6 hidden md:block">
-            <span className="font-display italic text-olive-deep/15 text-[10rem] leading-none">”</span>
-          </div>
-        </div>
-
         <div className="lg:col-span-7">
           <span className="inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.4em] text-ochre">
             <span className="h-px w-8 bg-current" /> {t.purpose.eyebrow}
@@ -36,6 +26,16 @@ export default function PurposeSection() {
             <span className="h-px w-12 bg-ochre" />
             {t.purpose.end}
           </p>
+        </div>
+
+        <div className="lg:col-span-5 relative">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
+            <img src={bg} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            <div className="absolute inset-0 bg-bark/15" />
+          </div>
+          <div className="absolute -bottom-6 -right-6 hidden md:block">
+            <span className="font-display italic text-olive-deep/15 text-[10rem] leading-none">”</span>
+          </div>
         </div>
       </div>
     </section>
