@@ -138,7 +138,7 @@ function Index() {
           <BookingWidget />
         </div>
       </div>
-      <div className="fixed bottom-20 md:bottom-4 right-4 z-50 flex items-center gap-2 bg-cream/90 backdrop-blur rounded-full p-2 shadow-lg">
+      <div className="fixed bottom-20 md:bottom-4 right-4 z-50 hidden md:flex items-center gap-2 bg-cream/90 backdrop-blur rounded-full p-2 shadow-lg">
         <a
           href="https://instagram.com/"
           target="_blank"
