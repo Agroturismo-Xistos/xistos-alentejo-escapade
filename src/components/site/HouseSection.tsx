@@ -52,7 +52,7 @@ const commonAlts = [
 export default function HouseSection() {
   const t = useT();
   return (
-    <section id="casa" className="py-28 md:py-40 bg-cream">
+    <section id="casa" className="py-16 md:py-24 bg-cream">
       <div className="mx-auto max-w-[1400px] px-6 md:px-12">
         <div className="flex items-end justify-between gap-10 flex-wrap">
           <SectionHeading
@@ -66,7 +66,7 @@ export default function HouseSection() {
           </span>
         </div>
 
-        <div className="mt-24 space-y-32">
+        <div className="mt-16 space-y-16">
           {t.house.groups.map((g, i) => {
             const altsForGroup = i === 0 ? commonAlts : i === 1 ? roomAlts : g.alts;
             const images = groupImages[i].map((src, j) => ({ src, alt: altsForGroup?.[j] ?? g.title }));

@@ -8,7 +8,7 @@ const TEL = "tel:+351964814928";
 export default function CampaignSection() {
   const t = useT();
   return (
-    <section id="campanhas" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="campanhas" className="relative py-16 md:py-24 overflow-hidden">
       <img src={bg} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
       <div className="absolute inset-0 bg-gradient-to-b from-olive-deep/90 via-olive-deep/85 to-bark/90" />
 
@@ -28,7 +28,7 @@ export default function CampaignSection() {
         </div>
 
         {/* Video placeholders */}
-        <div className="mt-12 grid sm:grid-cols-2 gap-5 max-w-4xl mx-auto">
+        <div className="mt-10 grid sm:grid-cols-2 gap-5 max-w-4xl mx-auto">
           {[1, 2].map((i) => (
             <div
               key={i}
@@ -43,7 +43,7 @@ export default function CampaignSection() {
         </div>
 
         {/* Pricing */}
-        <div className="mt-16 grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+        <div className="mt-10 grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {t.campaign.rooms.map((p) => (
             <div key={p.name} className="rounded-3xl bg-cream/95 p-8 text-center shadow-card border border-cream/20">
               <h3 className="font-display text-3xl text-olive-deep">{p.name}</h3>

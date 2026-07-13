@@ -28,7 +28,7 @@ export default function NatureSection() {
   const images = shuffled.map((src) => ({ src, alt: t.nature.title }));
 
   return (
-    <section id="natureza" className="py-28 md:py-40 bg-cream">
+    <section id="natureza" className="py-16 md:py-24 bg-cream">
       <div className="mx-auto max-w-[1400px] px-6 md:px-12">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-end">
           <div className="lg:col-span-5">
@@ -52,7 +52,7 @@ export default function NatureSection() {
           </div>
         </div>
 
-        <div className="mt-20">
+        <div className="mt-12">
           <ImageCarousel images={images} aspect="aspect-[21/9]" />
         </div>
       </div>
