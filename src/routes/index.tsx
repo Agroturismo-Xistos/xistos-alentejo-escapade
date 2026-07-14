@@ -10,6 +10,7 @@ import CampaignSection from "@/components/site/CampaignSection";
 import LocationSection from "@/components/site/LocationSection";
 import ContactSection from "@/components/site/ContactSection";
 
+
 import BookingWidget from "@/components/site/BookingWidget";
 import CampaignOverlay from "@/components/site/CampaignOverlay";
 
@@ -117,11 +118,13 @@ function Index() {
       <CampaignSection />
       <LocationSection />
       <ContactSection />
+
       <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[min(100%-1rem,56rem)] px-2 pointer-events-none">
         <div className="pointer-events-auto">
           <BookingWidget />
         </div>
       </div>
+
       <div className="fixed bottom-20 md:bottom-4 right-4 z-50 hidden md:flex items-center gap-2 bg-cream/90 backdrop-blur rounded-full p-2 shadow-lg">
         <a
           href="https://instagram.com/"

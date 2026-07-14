@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CalendarIcon, Users, Tag, Search, Minus, Plus } from "lucide-react";
+import { CalendarIcon, Users, Search, Minus, Plus } from "lucide-react";
 import { format } from "date-fns";
 import { pt as ptLocale, enUS, fr as frLocale, es as esLocale } from "date-fns/locale";
 import type { DateRange } from "react-day-picker";
@@ -7,7 +7,6 @@ import { Link } from "@tanstack/react-router";
 
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
-import { Input } from "@/components/ui/input";
 import { useT, useLanguage } from "@/i18n/LanguageContext";
 import { useBookingModal } from "@/components/site/BookingModalProvider";
 
@@ -25,7 +24,6 @@ export default function BookingWidget() {
   const [range, setRange] = useState<DateRange | undefined>();
   const [adults, setAdults] = useState(2);
   const [children, setChildren] = useState(0);
-  const [promo, setPromo] = useState("");
 
   const datesLabel =
     range?.from && range?.to
@@ -47,7 +45,6 @@ export default function BookingWidget() {
           : b.datesPlaceholder
       }`,
       `${b.who}: ${adults} ${b.adults}, ${children} ${b.children}`,
-      promo ? `${b.promo}: ${promo}` : null,
     ].filter(Boolean) as string[];
     const msg = encodeURIComponent(lines.join("\n"));
     window.open(`${WHATSAPP}?text=${msg}`, "_blank", "noopener,noreferrer");
@@ -108,32 +105,10 @@ export default function BookingWidget() {
           </PopoverContent>
         </Popover>
 
-        <div className="hidden md:block w-px bg-bark/10 my-2" />
-
-        {/* Promoção */}
-        <Popover>
-          <PopoverTrigger className="flex-1 flex items-center gap-3 px-5 py-3 rounded-xl md:rounded-full hover:bg-bark/5 transition text-left">
-            <Tag className="h-5 w-5 text-ochre shrink-0" />
-            <div className="min-w-0">
-              <div className="text-[10px] uppercase tracking-[0.2em] text-bark/60">{b.promo}</div>
-              <div className="text-sm text-olive-deep truncate">{promo || b.code}</div>
-            </div>
-          </PopoverTrigger>
-          <PopoverContent className="w-64 p-4" align="start">
-            <label className="text-xs uppercase tracking-widest text-bark/70 block mb-2">
-              {b.code}
-            </label>
-            <Input
-              value={promo}
-              onChange={(e) => setPromo(e.target.value)}
-              placeholder={b.codePlaceholder}
-            />
-          </PopoverContent>
-        </Popover>
         </div>
 
         <button
-          onClick={() => openModal({ range, adults, children, promo })}
+          onClick={() => openModal({ range, adults, children })}
           className="inline-flex items-center justify-center gap-2 rounded-xl md:rounded-full bg-ochre text-cream px-7 py-4 text-[12px] uppercase tracking-[0.2em] font-medium hover:bg-ochre/90 transition cursor-pointer"
         >
           <Search className="h-4 w-4" />

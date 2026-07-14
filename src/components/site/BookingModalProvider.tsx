@@ -1,8 +1,8 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, ReactNode } from "react";
 import { format } from "date-fns";
 import type { DateRange } from "react-day-picker";
-import { X } from "lucide-react";
 import { trackBookingIntent } from "@/lib/metaPixel";
+import { buildAmenitizBookingUrl, DEFAULT_BOOKING_URL } from "@/lib/amenitiz";
 
 interface BookingModalContextType {
   isOpen: boolean;
@@ -13,79 +13,45 @@ interface BookingModalContextType {
 const BookingModalContext = createContext<BookingModalContextType | undefined>(undefined);
 
 export function BookingModalProvider({ children }: { children: ReactNode }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [iframeUrl, setIframeUrl] = useState("https://agroturismo-xistos.amenitiz.io/pt/booking/room#DatesGuests-BE");
-
+  /**
+   * Abre o sistema de reservas da Amenitiz directamente numa nova aba,
+   * com os parâmetros de data, adultos e crianças já preenchidos na URL.
+   *
+   * URL esperada:
+   * https://agroturismo-xistos.amenitiz.io/pt/booking/room
+   *   ?start_date=YYYY-MM-DD&end_date=YYYY-MM-DD&adults=2&children=0
+   *   #RoomSelection-BE
+   */
   const openModal = (params?: { range?: DateRange; adults?: number; children?: number; promo?: string }) => {
     trackBookingIntent();
 
-    let url = "https://agroturismo-xistos.amenitiz.io/pt/booking/room";
+    let url: string;
 
-    const query = new URLSearchParams();
-    if (params?.range?.from) {
-      query.append("arrival", format(params.range.from, "yyyy-MM-dd"));
-    }
-    if (params?.range?.to) {
-      query.append("departure", format(params.range.to, "yyyy-MM-dd"));
-    }
-    if (params?.adults !== undefined) {
-      query.append("adults", params.adults.toString());
-    }
-    if (params?.children !== undefined) {
-      query.append("children", params.children.toString());
-    }
-    if (params?.promo) {
-      query.append("promocode", params.promo);
+    if (params?.range?.from && params?.range?.to) {
+      // Constrói a URL com os parâmetros correctos usando a função partilhada
+      url = buildAmenitizBookingUrl({
+        startDate: format(params.range.from, "yyyy-MM-dd"),
+        endDate: format(params.range.to, "yyyy-MM-dd"),
+        adults: params.adults ?? 2,
+        children: params.children ?? 0,
+      });
+    } else {
+      // Sem datas: abre a página de reservas sem parâmetros
+      url = DEFAULT_BOOKING_URL;
     }
 
-    const queryString = query.toString();
-    if (queryString) {
-      url += "?" + queryString;
-    }
-    url += "#DatesGuests-BE";
+    console.log("[Xistos] Abrindo Amenitiz:", url);
 
-    // No mobile, navega directamente para o Amenitiz (window.open pode ser bloqueado).
-    const isMobile = typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches;
-    if (isMobile) {
-      window.location.href = url;
-      return;
-    }
-
-    setIframeUrl(url);
-    setIsOpen(true);
+    // Abre sempre directamente no Amenitiz — sem iframe, sem modal
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
-  const closeModal = () => setIsOpen(false);
+  // closeModal mantido por compatibilidade (não faz nada agora que não há modal)
+  const closeModal = () => {};
 
   return (
-    <BookingModalContext.Provider value={{ isOpen, openModal, closeModal }}>
+    <BookingModalContext.Provider value={{ isOpen: false, openModal, closeModal }}>
       {children}
-      
-      {isOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 md:p-8">
-          <div className="relative w-full max-w-5xl h-[85vh] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in duration-300">
-            <div className="absolute top-4 right-4 z-10 flex gap-2">
-              <button 
-                onClick={closeModal} 
-                className="grid place-items-center w-10 h-10 bg-white/90 hover:bg-white backdrop-blur shadow-md rounded-full transition-all text-bark hover:text-ochre"
-                aria-label="Fechar modal"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-            
-            <div className="flex-1 w-full h-full relative overflow-hidden bg-white/50">
-              <iframe
-                src={iframeUrl}
-                title="Sistema de reservas"
-                className="absolute inset-0 w-full h-full border-0 bg-transparent"
-                allow="payment"
-                referrerPolicy="strict-origin-when-cross-origin"
-              />
-            </div>
-          </div>
-        </div>
-      )}
     </BookingModalContext.Provider>
   );
 }
