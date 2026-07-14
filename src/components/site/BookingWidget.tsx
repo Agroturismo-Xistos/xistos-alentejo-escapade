@@ -3,14 +3,13 @@ import { CalendarIcon, Users, Tag, Search, Minus, Plus } from "lucide-react";
 import { format } from "date-fns";
 import { pt as ptLocale, enUS, fr as frLocale, es as esLocale } from "date-fns/locale";
 import type { DateRange } from "react-day-picker";
-import { Link, useNavigate } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 import { Input } from "@/components/ui/input";
 import { useT, useLanguage } from "@/i18n/LanguageContext";
 import { useBookingModal } from "@/components/site/BookingModalProvider";
-import { useIsMobile } from "@/hooks/use-mobile";
 
 const WHATSAPP = "https://wa.me/351964814928";
 
@@ -22,8 +21,6 @@ export default function BookingWidget() {
   const locale = localeMap[lang];
   const b = t.booking;
   const { openModal } = useBookingModal();
-  const isMobile = useIsMobile();
-  const navigate = useNavigate();
 
   const [range, setRange] = useState<DateRange | undefined>();
   const [adults, setAdults] = useState(2);
@@ -136,13 +133,7 @@ export default function BookingWidget() {
         </div>
 
         <button
-          onClick={() => {
-            if (isMobile) {
-              navigate({ to: "/reservas" });
-            } else {
-              openModal({ range, adults, children, promo });
-            }
-          }}
+          onClick={() => openModal({ range, adults, children, promo })}
           className="inline-flex items-center justify-center gap-2 rounded-xl md:rounded-full bg-ochre text-cream px-7 py-4 text-[12px] uppercase tracking-[0.2em] font-medium hover:bg-ochre/90 transition cursor-pointer"
         >
           <Search className="h-4 w-4" />

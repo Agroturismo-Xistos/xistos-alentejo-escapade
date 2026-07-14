@@ -44,10 +44,10 @@ export function BookingModalProvider({ children }: { children: ReactNode }) {
     }
     url += "#DatesGuests-BE";
 
-    // No mobile, abre directamente no Amenitiz; no desktop abre o modal.
+    // No mobile, navega directamente para o Amenitiz (window.open pode ser bloqueado).
     const isMobile = typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches;
     if (isMobile) {
-      window.open(url, "_blank", "noopener,noreferrer");
+      window.location.href = url;
       return;
     }
 
