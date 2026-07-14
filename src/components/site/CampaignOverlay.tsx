@@ -6,11 +6,7 @@ export default function CampaignOverlay() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (sessionStorage.getItem("hasSeenCampaignOverlay")) return;
-    const show = setTimeout(() => {
-      setOpen(true);
-      sessionStorage.setItem("hasSeenCampaignOverlay", "true");
-    }, 1500);
+    const show = setTimeout(() => setOpen(true), 1500);
     return () => clearTimeout(show);
   }, []);
 
