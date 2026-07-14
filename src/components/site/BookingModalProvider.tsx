@@ -18,9 +18,9 @@ export function BookingModalProvider({ children }: { children: ReactNode }) {
 
   const openModal = (params?: { range?: DateRange; adults?: number; children?: number; promo?: string }) => {
     trackBookingIntent();
-    
+
     let url = "https://agroturismo-xistos.amenitiz.io/pt/booking/room";
-    
+
     const query = new URLSearchParams();
     if (params?.range?.from) {
       query.append("arrival", format(params.range.from, "yyyy-MM-dd"));
@@ -37,13 +37,20 @@ export function BookingModalProvider({ children }: { children: ReactNode }) {
     if (params?.promo) {
       query.append("promocode", params.promo);
     }
-    
+
     const queryString = query.toString();
     if (queryString) {
       url += "?" + queryString;
     }
     url += "#DatesGuests-BE";
-    
+
+    // No mobile, abre directamente no Amenitiz; no desktop abre o modal.
+    const isMobile = typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches;
+    if (isMobile) {
+      window.open(url, "_blank", "noopener,noreferrer");
+      return;
+    }
+
     setIframeUrl(url);
     setIsOpen(true);
   };
