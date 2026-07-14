@@ -11,8 +11,7 @@ import LocationSection from "@/components/site/LocationSection";
 import ContactSection from "@/components/site/ContactSection";
 
 import BookingWidget from "@/components/site/BookingWidget";
-import { useBookingModal } from "@/components/site/BookingModalProvider";
-import { useEffect } from "react";
+import CampaignOverlay from "@/components/site/CampaignOverlay";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -106,24 +105,9 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const { openModal } = useBookingModal();
-
-  useEffect(() => {
-    // Check if the modal has already been shown in this session to avoid annoying the user on every return
-    const hasSeenModal = sessionStorage.getItem("hasSeenBookingModal");
-    if (!hasSeenModal) {
-      const timer = setTimeout(() => {
-        if (window.innerWidth >= 768) {
-          openModal();
-          sessionStorage.setItem("hasSeenBookingModal", "true");
-        }
-      }, 15000);
-      return () => clearTimeout(timer);
-    }
-  }, [openModal]);
-
   return (
     <main className="bg-background text-foreground">
+      <CampaignOverlay />
       <Navbar />
       <Hero />
       <HouseSection />
