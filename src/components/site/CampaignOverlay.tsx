@@ -44,12 +44,15 @@ export default function CampaignOverlay() {
         <div className="aspect-[4/3] md:aspect-auto md:h-full">
           <img src={img} alt="Agroturismo Xistos" className="h-full w-full object-cover" />
         </div>
-        <div className="p-8 md:p-10 flex flex-col justify-center gap-5">
+        <div className="p-8 md:p-10 flex flex-col justify-center gap-4">
           <h2 className="font-serif text-3xl md:text-4xl leading-tight text-bark">
-            A sua Casa no Campo!
+            A sua casa no campo
           </h2>
           <p className="text-base md:text-lg text-bark/80 leading-relaxed">
-            <span className="font-semibold text-bark">Reserva:</span> 10% de desconto ao reservar diretamente connosco.
+            Reserve diretamente connosco e beneficie de <span className="font-semibold text-bark">10% de desconto</span>.
+          </p>
+          <p className="text-base md:text-lg text-bark/80 leading-relaxed">
+            <span className="font-semibold text-bark">Estadias prolongadas:</span> aproveite <span className="font-semibold text-bark">30% de desconto</span> com a campanha <em>Muda os Teus Planos</em>.
           </p>
         </div>
       </div>
