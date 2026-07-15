@@ -17,7 +17,7 @@ export const Route = createFileRoute("/termos-e-condicoes")({
 function TermosCondicoesPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Navbar />
+      <Navbar alwaysDark />
       <main className="pt-36 md:pt-44 pb-20 px-6 md:px-10 max-w-3xl mx-auto">
         <h1 className="font-display text-4xl md:text-5xl text-olive-deep mb-10">
           Termos e Condições
