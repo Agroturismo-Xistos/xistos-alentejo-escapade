@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import hero from "@/assets/hero.jpg";
 import mobileVideo from "@/assets/1.Reels_LongaDuracao.mp4";
 import desktopVideo from "@/assets/2.Filme_TurismoLongaDuracao.mp4";
 import { useT } from "@/i18n/LanguageContext";
