@@ -104,13 +104,10 @@ export default function Hero() {
         loop
         playsInline
         preload="auto"
-        poster={hero}
         controls={false}
         disablePictureInPicture
         aria-hidden="true"
-        className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
-          isVideoPlaying ? "opacity-100" : "opacity-0"
-        }`}
+        className="absolute inset-0 h-full w-full object-cover opacity-100"
         onLoadedMetadata={() => void startVideo()}
         onLoadedData={() => void startVideo()}
         onCanPlay={() => void startVideo()}
@@ -122,25 +119,6 @@ export default function Hero() {
           setIsVideoPlaying(false);
         }}
       />
-
-      <div
-        className={`absolute inset-0 bg-cover bg-center transition-opacity duration-700 ${
-          isVideoPlaying ? "opacity-0" : "opacity-100"
-        }`}
-        style={{ backgroundImage: `url(${hero})` }}
-      />
-
-      {!isVideoPlaying && !hasVideoError && (
-        <div className="pointer-events-none absolute inset-0 z-[2] flex items-center justify-center">
-          <div className="flex flex-col items-center gap-3 text-cream">
-            <span className="h-8 w-8 animate-spin rounded-full border-2 border-cream/30 border-t-cream" />
-
-            <span className="text-xs uppercase tracking-[0.25em]">
-              A carregar
-            </span>
-          </div>
-        </div>
-      )}
 
       <div className="absolute inset-0 z-[3] bg-bark/50" />
 
