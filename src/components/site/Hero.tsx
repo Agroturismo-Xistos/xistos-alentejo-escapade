@@ -95,13 +95,6 @@ export default function Hero() {
         onLoadedMetadata={() => void startVideo()}
         onLoadedData={() => void startVideo()}
         onCanPlay={() => void startVideo()}
-        onPlaying={() => setIsVideoPlaying(true)}
-        onWaiting={() => setIsVideoPlaying(false)}
-        onStalled={() => setIsVideoPlaying(false)}
-        onError={() => {
-          setHasVideoError(true);
-          setIsVideoPlaying(false);
-        }}
       />
 
       <div className="absolute inset-0 z-[3] bg-bark/50" />
