@@ -10,9 +10,6 @@ export default function Hero() {
   const t = useT();
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-  const [hasVideoError, setHasVideoError] = useState(false);
-
   const [videoSrc, setVideoSrc] = useState(() => {
     if (typeof window === "undefined") return desktopVideo;
 
@@ -25,7 +22,6 @@ export default function Hero() {
 
   const startVideo = useCallback(async () => {
     const video = videoRef.current;
-
     if (!video) return;
 
     video.muted = true;
@@ -45,25 +41,16 @@ export default function Hero() {
     );
 
     const handleChange = (event: MediaQueryListEvent) => {
-      setIsVideoPlaying(false);
-      setHasVideoError(false);
       setVideoSrc(event.matches ? mobileVideo : desktopVideo);
     };
 
     mediaQuery.addEventListener("change", handleChange);
-
-    return () => {
-      mediaQuery.removeEventListener("change", handleChange);
-    };
+    return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
   useEffect(() => {
     const video = videoRef.current;
-
     if (!video) return;
-
-    setIsVideoPlaying(false);
-    setHasVideoError(false);
 
     video.muted = true;
     video.defaultMuted = true;
@@ -83,10 +70,7 @@ export default function Hero() {
 
     return () => {
       window.clearTimeout(timeoutId);
-      document.removeEventListener(
-        "visibilitychange",
-        handleVisibilityChange,
-      );
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, [videoSrc, startVideo]);
 
