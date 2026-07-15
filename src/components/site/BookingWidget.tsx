@@ -52,7 +52,7 @@ export default function BookingWidget() {
 
   return (
     <div className="w-full max-w-4xl mx-auto">
-      <div className="rounded-2xl md:rounded-full bg-cream/95 backdrop-blur-md shadow-card border border-cream/30 p-2 flex flex-col md:flex-row items-stretch gap-2">
+      <div className="rounded-2xl md:rounded-full bg-cream/95 backdrop-blur-md shadow-card border-2 border-ochre p-2 flex flex-col md:flex-row items-stretch gap-2">
         <div className="hidden md:contents">
           {/* Quando */}
           <Popover>
