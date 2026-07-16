@@ -78,7 +78,7 @@ function CardCarousel({
         <ChevronRight className="h-4 w-4" />
       </button>
 
-      <h3 className="absolute bottom-6 left-6 right-6 font-display font-light text-3xl md:text-4xl text-cream leading-[1.05] tracking-[-0.02em] z-[5]">
+      <h3 className="absolute bottom-6 left-6 right-6 font-display font-light text-2xl md:text-3xl text-cream leading-[1.05] tracking-[-0.02em] z-[5]">
         {title}
       </h3>
 

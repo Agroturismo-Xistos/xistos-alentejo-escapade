@@ -16,10 +16,10 @@ export default function CampaignSection() {
           <span className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.35em] text-ochre-soft">
             <span className="h-px w-6 bg-current" /> {t.campaign.eyebrow}
           </span>
-          <h2 className="mt-5 font-display text-5xl md:text-6xl text-cream text-balance">
+          <h2 className="mt-5 font-display text-4xl md:text-5xl text-cream text-balance">
             {t.campaign.title}
           </h2>
-          <p className="mt-8 text-xl md:text-2xl font-display text-ochre-soft">
+          <p className="mt-8 text-lg md:text-xl font-display text-ochre-soft">
             {t.campaign.highlight}
           </p>
           <p className="mt-6 text-cream/85 leading-relaxed">{t.campaign.desc}</p>
@@ -53,9 +53,9 @@ export default function CampaignSection() {
         <div className="mt-10 grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {t.campaign.rooms.map((p) => (
             <div key={p.name} className="rounded-3xl bg-cream/95 p-8 text-center shadow-card border border-cream/20">
-              <h3 className="font-display text-3xl text-olive-deep">{p.name}</h3>
+              <h3 className="font-display text-2xl text-olive-deep">{p.name}</h3>
               <div className="mt-6 flex items-baseline justify-center gap-2">
-                <span className="font-display text-5xl text-ochre">{p.day}</span>
+                <span className="font-display text-4xl text-ochre">{p.day}</span>
                 <span className="text-muted-foreground">{p.perDay}</span>
               </div>
               <div className="mt-2 text-bark/70">
@@ -73,7 +73,7 @@ export default function CampaignSection() {
 
         {/* Info */}
         <div className="mt-12 max-w-3xl mx-auto rounded-3xl bg-cream/10 backdrop-blur-md border border-cream/20 p-8">
-          <h4 className="font-display text-2xl text-cream">{t.campaign.infoTitle}</h4>
+          <h4 className="font-display text-xl text-cream">{t.campaign.infoTitle}</h4>
           <ul className="mt-5 grid sm:grid-cols-2 gap-x-6 gap-y-3 text-cream/90 text-sm">
             {t.campaign.info.map((s) => (
               <li key={s} className="flex gap-2">

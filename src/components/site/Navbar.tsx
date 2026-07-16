@@ -53,12 +53,12 @@ export default function Navbar({ alwaysDark = false }: { alwaysDark?: boolean })
             : "bg-transparent"
         }`}
       >
-        <nav className="w-full px-6 md:px-10 flex justify-between lg:grid lg:grid-cols-3 items-center h-28 md:h-32">
+        <nav className="w-full px-6 md:px-10 flex justify-between lg:grid lg:grid-cols-3 items-center h-20 md:h-24">
         <a href="/" className="flex items-center gap-3 shrink-0 lg:justify-self-start">
           <img
             src={isDark ? logoDark : logoLight}
             alt="Agroturismo Xistos"
-            className="h-16 md:h-20 w-auto transition-opacity duration-300"
+            className="h-12 md:h-16 w-auto transition-opacity duration-300"
           />
         </a>
 
@@ -67,7 +67,7 @@ export default function Navbar({ alwaysDark = false }: { alwaysDark?: boolean })
             <li key={l.href}>
               <a
                 href={l.href}
-                className={`whitespace-nowrap text-[17px] uppercase tracking-[0.18em] font-medium transition-colors relative after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:transition-all hover:after:w-full ${
+                className={`whitespace-nowrap text-[13px] uppercase tracking-[0.18em] font-medium transition-colors relative after:absolute after:-bottom-2 after:left-0 after:h-px after:w-0 after:transition-all hover:after:w-full ${
                   isDark ? "text-bark hover:text-bark/80 after:bg-bark" : "text-cream/90 hover:text-cream after:bg-cream"
                 }`}
               >
@@ -83,7 +83,7 @@ export default function Navbar({ alwaysDark = false }: { alwaysDark?: boolean })
           </div>
           <a
             href="tel:+351964814928"
-            className={`hidden md:inline-flex items-center gap-2 text-[17px] uppercase tracking-[0.18em] font-medium transition-colors ${
+            className={`hidden md:inline-flex items-center gap-2 text-[13px] uppercase tracking-[0.18em] font-medium transition-colors ${
               isDark ? "text-bark hover:text-bark/80" : "text-cream/90 hover:text-cream"
             }`}
           >

@@ -10,19 +10,19 @@ export default function PurposeSection() {
           <span className="inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.4em] text-ochre">
             <span className="h-px w-8 bg-current" /> {t.purpose.eyebrow}
           </span>
-          <h2 className="mt-6 font-display font-light text-6xl md:text-7xl lg:text-[5.5rem] text-olive-deep leading-[0.95] tracking-[-0.03em]">
+          <h2 className="mt-6 font-display font-light text-5xl md:text-6xl lg:text-[5rem] text-olive-deep leading-[0.95] tracking-[-0.03em]">
             <em className="not-italic italic">{t.purpose.title}</em>
           </h2>
 
-          <div className="mt-10 space-y-7 text-xl md:text-2xl leading-[1.5] text-bark/80 font-display font-light tracking-[-0.01em] max-w-2xl">
+          <div className="mt-10 space-y-7 text-lg md:text-xl leading-[1.5] text-bark/80 font-display font-light tracking-[-0.01em] max-w-2xl">
             <p>
               {t.purpose.p1Part1}<span className="text-ochre">{t.purpose.p1Part2}</span>
             </p>
-            <p className="text-bark/60 text-lg md:text-xl">{t.purpose.p2}</p>
-            <p className="text-bark/60 text-lg md:text-xl">{t.purpose.p3}</p>
+            <p className="text-bark/60 text-base md:text-lg">{t.purpose.p2}</p>
+            <p className="text-bark/60 text-base md:text-lg">{t.purpose.p3}</p>
           </div>
 
-          <p className="mt-12 inline-flex items-center gap-4 font-display italic text-3xl md:text-4xl text-ochre tracking-tight">
+          <p className="mt-12 inline-flex items-center gap-4 font-display italic text-2xl md:text-3xl text-ochre tracking-tight">
             <span className="h-px w-12 bg-ochre" />
             {t.purpose.end}
           </p>

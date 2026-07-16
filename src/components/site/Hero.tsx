@@ -110,8 +110,8 @@ export default function Hero() {
           <span className="h-px w-10 bg-ochre-soft" />
         </span>
 
-        <h1 className="reveal-slow mt-8 text-balance font-display text-[clamp(3.5rem,11vw,11rem)] font-light leading-[0.9] tracking-[-0.04em]">
-          {t.hero.titleA}{" "}
+        <h1 className="reveal-slow mt-8 text-balance font-display text-[clamp(4rem,9vw,7.5rem)] font-light leading-[0.9] tracking-[-0.04em]">
+          {t.hero.titleA}{" "}<br/>
           <em className="italic text-ochre-soft">{t.hero.titleB}</em>
           <span className="text-ochre-soft">!</span>
         </h1>
