@@ -2,7 +2,6 @@ import bg from "@/assets/campaign-bg.jpg";
 import { Check } from "lucide-react";
 import { useT } from "@/i18n/LanguageContext";
 
-
 const TEL = "tel:+351964814928";
 
 export default function CampaignSection() {
