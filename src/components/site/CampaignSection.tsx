@@ -1,5 +1,5 @@
 import bg from "@/assets/campaign-bg.jpg";
-import { Check, PlayCircle } from "lucide-react";
+import { Check } from "lucide-react";
 import { useT } from "@/i18n/LanguageContext";
 
 
@@ -27,17 +27,25 @@ export default function CampaignSection() {
           <p className="mt-3 text-cream/70 text-sm italic">{t.campaign.videoNote}</p>
         </div>
 
-        {/* Video placeholders */}
+        {/* YouTube Videos */}
         <div className="mt-10 grid sm:grid-cols-2 gap-5 max-w-4xl mx-auto">
-          {[1, 2].map((i) => (
+          {[
+            { id: "6SBRj8ebW8A", label: t.campaign.videoLabel + " 1" },
+            { id: "phdLccFWs5o", label: t.campaign.videoLabel + " 2" },
+          ].map(({ id, label }) => (
             <div
-              key={i}
-              className="group relative aspect-video rounded-2xl border border-cream/20 bg-cream/5 backdrop-blur-sm overflow-hidden flex items-center justify-center cursor-pointer hover:bg-cream/10 transition"
+              key={id}
+              className="relative aspect-video rounded-2xl border border-cream/20 overflow-hidden shadow-lg"
             >
-              <PlayCircle className="h-16 w-16 text-cream/70 group-hover:text-ochre transition" />
-              <span className="absolute bottom-4 left-4 text-xs text-cream/60 uppercase tracking-widest">
-                {t.campaign.videoLabel} {i}
-              </span>
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${id}?rel=0&modestbranding=1`}
+                title={label}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                loading="lazy"
+                className="absolute inset-0 w-full h-full"
+                style={{ border: 0 }}
+              />
             </div>
           ))}
         </div>
