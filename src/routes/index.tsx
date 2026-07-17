@@ -10,29 +10,28 @@ import CampaignSection from "@/components/site/CampaignSection";
 import LocationSection from "@/components/site/LocationSection";
 import ContactSection from "@/components/site/ContactSection";
 
-
 import BookingWidget from "@/components/site/BookingWidget";
 import CampaignOverlay from "@/components/site/CampaignOverlay";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Agroturismo Xistos" },
+      { title: "Agroturismo Xistos | Turismo Rural no Alentejo" },
       {
         name: "description",
         content:
-          "O Agro Turismo Xistos é uma forma de estar na vida, premeia a mensagem para a sustentabilidade ! Saber Mais. Campanhas. Para todos os tipos de turistas nómadas ...",
+          "Descubra o Agroturismo Xistos na Herdade Monte da Ponte, Beja. Uma autêntica experiência de turismo rural no Alentejo. Sustentabilidade, natureza e tranquilidade.",
       },
-      { property: "og:title", content: "Agroturismo Xistos" },
+      { property: "og:title", content: "Agroturismo Xistos | Turismo Rural no Alentejo" },
       {
         property: "og:description",
-        content: "O Agro Turismo Xistos é uma forma de estar na vida, premeia a mensagem para a sustentabilidade ! Saber Mais. Campanhas. Para todos os tipos de turistas nómadas ...",
+        content: "Descubra o Agroturismo Xistos na Herdade Monte da Ponte, Beja. Uma autêntica experiência de turismo rural no Alentejo.",
       },
       { property: "og:type", content: "website" },
-      { name: "twitter:title", content: "Agroturismo Xistos" },
+      { name: "twitter:title", content: "Agroturismo Xistos | Turismo Rural no Alentejo" },
       {
         name: "twitter:description",
-        content: "O Agro Turismo Xistos é uma forma de estar na vida, premeia a mensagem para a sustentabilidade ! Saber Mais. Campanhas. Para todos os tipos de turistas nómadas ...",
+        content: "Descubra o Agroturismo Xistos na Herdade Monte da Ponte, Beja. Uma autêntica experiência de turismo rural no Alentejo.",
       },
     ],
     links: [
@@ -47,8 +46,8 @@ export const Route = createFileRoute("/")({
             {
               "@type": "LodgingBusiness",
               "name": "Agroturismo Xistos Herdade Monte da Ponte",
-              "image": "https://www.xistos.pt/logo.png",
-              "description": "O Agro Turismo Xistos é uma forma de estar na vida, premeia a mensagem para a sustentabilidade ! Saber Mais. Campanhas. Para todos os tipos de turistas nómadas ...",
+              "image": "https://www.xistos.pt/og-image.jpg",
+              "description": "Descubra o Agroturismo Xistos na Herdade Monte da Ponte, Beja. Uma autêntica experiência de turismo rural no Alentejo. Sustentabilidade, natureza e tranquilidade.",
               "url": "https://www.xistos.pt/",
               "telephone": "+351964814928",
               "address": {
@@ -59,12 +58,7 @@ export const Route = createFileRoute("/")({
                 "addressRegion": "Beja",
                 "addressCountry": "PT"
               },
-              "priceRange": "€€",
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.5",
-                "reviewCount": "45"
-              }
+              "priceRange": "€€"
             },
             {
               "@type": "WebSite",
@@ -127,7 +121,7 @@ function Index() {
 
       <div className="fixed bottom-20 md:bottom-4 right-4 z-50 hidden md:flex items-center gap-2 bg-cream/90 backdrop-blur rounded-full p-2 shadow-lg">
         <a
-          href="https://instagram.com/"
+          href="https://www.instagram.com/agroturismoxistos/"
           target="_blank"
           rel="noreferrer"
           aria-label="Instagram"
@@ -147,7 +141,7 @@ function Index() {
           </svg>
         </a>
         <a
-          href="https://tiktok.com/"
+          href="https://www.tiktok.com/@agroturismoxistos"
           target="_blank"
           rel="noreferrer"
           aria-label="TikTok"
