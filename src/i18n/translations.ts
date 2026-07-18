@@ -99,6 +99,7 @@ const pt: Dict = {
           { name: 'Workshop na Herdade da Poupa – "Sabores da Terra – Vinho e Azeite"', details: ["Sessões até 12 pessoas — duração de 3h", "De Segunda a Sexta · Herdade da Poupa, Trindade, Beja"] },
           { name: 'Workshop com a Chefe Saudade Campeão – "Xistos à mesa"', details: ["Sessões até 12 pessoas — duração de 1h30", "De Segunda a Sábado · Agroturismo Xistos, Trindade, Beja"] },
           { name: 'Workshop com Manuel Oliveira – "Nós e as abelhas"', details: ["Sessões até 12 pessoas — duração de 1h30", "De Segunda a Domingo · Agroturismo Xistos, Trindade, Beja"] },
+          { name: 'Workshop com a Essência Alentejo – "Pão tradicional em forno de lenha"', details: ["Sessões de 10 a 12 pessoas", "De Segunda a Domingo · Vale de Russins"] },
         ],
       },
       {
@@ -218,6 +219,7 @@ const en: Dict = {
           { name: 'Workshop at Herdade da Poupa – "Flavours of the Land – Wine and Olive Oil"', details: ["Sessions up to 12 people — 3h duration", "Monday to Friday · Herdade da Poupa, Trindade, Beja"] },
           { name: 'Workshop with Chef Saudade Campeão – "Xistos at the table"', details: ["Sessions up to 12 people — 1h30 duration", "Monday to Saturday · Agroturismo Xistos, Trindade, Beja"] },
           { name: 'Workshop with Manuel Oliveira – "Us and the bees"', details: ["Sessions up to 12 people — 1h30 duration", "Monday to Sunday · Agroturismo Xistos, Trindade, Beja"] },
+          { name: 'Workshop with Essência Alentejo – "Traditional bread in a wood-fired oven"', details: ["Sessions for 10 to 12 people", "Monday to Sunday · Vale de Russins"] },
         ],
       },
       {
@@ -337,6 +339,7 @@ const fr: Dict = {
           { name: 'Atelier à Herdade da Poupa – "Saveurs de la Terre – Vin et Huile d\'Olive"', details: ["Sessions jusqu'à 12 personnes — durée 3h", "Du lundi au vendredi · Herdade da Poupa, Trindade, Beja"] },
           { name: 'Atelier avec la Cheffe Saudade Campeão – "Xistos à table"', details: ["Sessions jusqu'à 12 personnes — durée 1h30", "Du lundi au samedi · Agroturismo Xistos, Trindade, Beja"] },
           { name: 'Atelier avec Manuel Oliveira – "Nous et les abeilles"', details: ["Sessions jusqu'à 12 personnes — durée 1h30", "Du lundi au dimanche · Agroturismo Xistos, Trindade, Beja"] },
+          { name: 'Atelier avec Essência Alentejo – "Pain traditionnel au four à bois"', details: ["Sessions de 10 à 12 personnes", "Du lundi au dimanche · Vale de Russins"] },
         ],
       },
       {
@@ -456,6 +459,7 @@ const es: Dict = {
           { name: 'Taller en Herdade da Poupa – "Sabores de la Tierra – Vino y Aceite"', details: ["Sesiones hasta 12 personas — duración 3h", "De lunes a viernes · Herdade da Poupa, Trindade, Beja"] },
           { name: 'Taller con la Chef Saudade Campeão – "Xistos a la mesa"', details: ["Sesiones hasta 12 personas — duración 1h30", "De lunes a sábado · Agroturismo Xistos, Trindade, Beja"] },
           { name: 'Taller con Manuel Oliveira – "Nosotros y las abejas"', details: ["Sesiones hasta 12 personas — duración 1h30", "De lunes a domingo · Agroturismo Xistos, Trindade, Beja"] },
+          { name: 'Taller con Essência Alentejo – "Pan tradicional en horno de leña"', details: ["Sesiones de 10 a 12 personas", "De lunes a domingo · Vale de Russins"] },
         ],
       },
       {
