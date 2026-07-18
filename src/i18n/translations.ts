@@ -99,6 +99,7 @@ const pt: Dict = {
           { name: 'Workshop na Herdade da Poupa – "Sabores da Terra – Vinho e Azeite"', details: ["Sessões até 12 pessoas — duração de 3h", "De Segunda a Sexta · Herdade da Poupa, Trindade, Beja"] },
           { name: 'Workshop com a Chefe Saudade Campeão – "Xistos à mesa"', details: ["Sessões até 12 pessoas — duração de 1h30", "De Segunda a Sábado · Agroturismo Xistos, Trindade, Beja"] },
           { name: 'Workshop com Manuel Oliveira – "Nós e as abelhas"', details: ["Sessões até 12 pessoas — duração de 1h30", "De Segunda a Domingo · Agroturismo Xistos, Trindade, Beja"] },
+          { name: 'Workshop com a Essência Alentejo – "Pão tradicional em forno de lenha"', details: ["Sessões de 10 a 12 pessoas", "De Segunda a Domingo · Vale de Russins"] },
         ],
       },
       {
