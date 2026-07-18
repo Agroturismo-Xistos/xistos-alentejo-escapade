@@ -339,6 +339,7 @@ const fr: Dict = {
           { name: 'Atelier à Herdade da Poupa – "Saveurs de la Terre – Vin et Huile d\'Olive"', details: ["Sessions jusqu'à 12 personnes — durée 3h", "Du lundi au vendredi · Herdade da Poupa, Trindade, Beja"] },
           { name: 'Atelier avec la Cheffe Saudade Campeão – "Xistos à table"', details: ["Sessions jusqu'à 12 personnes — durée 1h30", "Du lundi au samedi · Agroturismo Xistos, Trindade, Beja"] },
           { name: 'Atelier avec Manuel Oliveira – "Nous et les abeilles"', details: ["Sessions jusqu'à 12 personnes — durée 1h30", "Du lundi au dimanche · Agroturismo Xistos, Trindade, Beja"] },
+          { name: 'Atelier avec Essência Alentejo – "Pain traditionnel au four à bois"', details: ["Sessions de 10 à 12 personnes", "Du lundi au dimanche · Vale de Russins"] },
         ],
       },
       {
