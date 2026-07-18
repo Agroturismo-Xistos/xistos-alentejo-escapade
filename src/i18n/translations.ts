@@ -219,6 +219,7 @@ const en: Dict = {
           { name: 'Workshop at Herdade da Poupa – "Flavours of the Land – Wine and Olive Oil"', details: ["Sessions up to 12 people — 3h duration", "Monday to Friday · Herdade da Poupa, Trindade, Beja"] },
           { name: 'Workshop with Chef Saudade Campeão – "Xistos at the table"', details: ["Sessions up to 12 people — 1h30 duration", "Monday to Saturday · Agroturismo Xistos, Trindade, Beja"] },
           { name: 'Workshop with Manuel Oliveira – "Us and the bees"', details: ["Sessions up to 12 people — 1h30 duration", "Monday to Sunday · Agroturismo Xistos, Trindade, Beja"] },
+          { name: 'Workshop with Essência Alentejo – "Traditional bread in a wood-fired oven"', details: ["Sessions for 10 to 12 people", "Monday to Sunday · Vale de Russins"] },
         ],
       },
       {
