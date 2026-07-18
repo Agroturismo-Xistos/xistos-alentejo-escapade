@@ -459,6 +459,7 @@ const es: Dict = {
           { name: 'Taller en Herdade da Poupa – "Sabores de la Tierra – Vino y Aceite"', details: ["Sesiones hasta 12 personas — duración 3h", "De lunes a viernes · Herdade da Poupa, Trindade, Beja"] },
           { name: 'Taller con la Chef Saudade Campeão – "Xistos a la mesa"', details: ["Sesiones hasta 12 personas — duración 1h30", "De lunes a sábado · Agroturismo Xistos, Trindade, Beja"] },
           { name: 'Taller con Manuel Oliveira – "Nosotros y las abejas"', details: ["Sesiones hasta 12 personas — duración 1h30", "De lunes a domingo · Agroturismo Xistos, Trindade, Beja"] },
+          { name: 'Taller con Essência Alentejo – "Pan tradicional en horno de leña"', details: ["Sesiones de 10 a 12 personas", "De lunes a domingo · Vale de Russins"] },
         ],
       },
       {
