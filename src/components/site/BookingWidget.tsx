@@ -109,7 +109,7 @@ export default function BookingWidget() {
 
         <button
           onClick={() => openModal({ range, adults, children })}
-          className="inline-flex items-center justify-center gap-2 rounded-xl md:rounded-full bg-ochre text-cream px-7 py-4 text-[12px] uppercase tracking-[0.2em] font-medium hover:bg-ochre/90 transition cursor-pointer"
+          className="inline-flex items-center justify-center gap-2 rounded-xl md:rounded-full bg-sand text-olive-deep px-7 py-4 text-[12px] uppercase tracking-[0.2em] font-medium hover:bg-sand/80 transition cursor-pointer shadow-soft border border-bark/10"
         >
           <Search className="h-4 w-4" />
           {t.nav.book}
