@@ -52,7 +52,7 @@ export default function BookingWidget() {
 
   return (
     <div className="w-full max-w-4xl mx-auto">
-      <div className="rounded-2xl md:rounded-full bg-cream/95 backdrop-blur-md shadow-card p-2 flex flex-col md:flex-row items-stretch gap-2">
+      <div className="rounded-2xl md:rounded-full bg-cream/95 backdrop-blur-md shadow-card border-2 border-ochre p-2 flex flex-col md:flex-row items-stretch gap-2">
         <div className="hidden md:contents">
           {/* Quando */}
           <Popover>
@@ -109,7 +109,7 @@ export default function BookingWidget() {
 
         <button
           onClick={() => openModal({ range, adults, children })}
-          className="inline-flex items-center justify-center gap-2 rounded-xl md:rounded-full bg-sand text-olive-deep px-7 py-4 text-[12px] uppercase tracking-[0.2em] font-medium hover:bg-sand/80 transition cursor-pointer shadow-soft border border-bark/10"
+          className="inline-flex items-center justify-center gap-2 rounded-xl md:rounded-full bg-ochre text-cream px-7 py-4 text-[12px] uppercase tracking-[0.2em] font-medium hover:bg-ochre/90 transition cursor-pointer"
         >
           <Search className="h-4 w-4" />
           {t.nav.book}
