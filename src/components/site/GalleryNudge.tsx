@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { X, Camera } from "lucide-react";
+import poolImg from "@/assets/nudge-pool.jpg";
+import roomImg from "@/assets/nudge-room.jpg";
 
 const SESSION_KEY = "xistos.galleryNudge.dismissed.v2";
 
