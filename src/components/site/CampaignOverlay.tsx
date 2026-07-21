@@ -10,10 +10,15 @@ export default function CampaignOverlay() {
     return () => clearTimeout(show);
   }, []);
 
+  const close = () => {
+    setOpen(false);
+    window.dispatchEvent(new CustomEvent("campaign-overlay:closed"));
+  };
+
   useEffect(() => {
     if (!open) return;
-    const hide = setTimeout(() => setOpen(false), 15000);
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    const hide = setTimeout(close, 15000);
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && close();
     window.addEventListener("keydown", onKey);
     return () => {
       clearTimeout(hide);
@@ -22,6 +27,7 @@ export default function CampaignOverlay() {
   }, [open]);
 
   if (!open) return null;
+
 
   return (
     <div
