@@ -1,17 +1,35 @@
 import { useEffect, useState } from "react";
 import { X, Camera } from "lucide-react";
 
-const SESSION_KEY = "xistos.galleryNudge.dismissed";
+const SESSION_KEY = "xistos.galleryNudge.dismissed.v2";
 
 export default function GalleryNudge() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    try {
-      if (sessionStorage.getItem(SESSION_KEY) === "1") return;
-    } catch {}
-    const t = setTimeout(() => setVisible(true), 2000);
-    return () => clearTimeout(t);
+    let timer: ReturnType<typeof setTimeout> | null = null;
+
+    const schedule = () => {
+      try {
+        if (sessionStorage.getItem(SESSION_KEY) === "1") return;
+      } catch {}
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(() => setVisible(true), 2000);
+    };
+
+    // If the campaign popup is not present after a short delay, show anyway.
+    const initial = setTimeout(() => {
+      if (!document.querySelector('[aria-modal="true"]')) schedule();
+    }, 500);
+
+    const onClosed = () => schedule();
+    window.addEventListener("campaign-overlay:closed", onClosed);
+
+    return () => {
+      clearTimeout(initial);
+      if (timer) clearTimeout(timer);
+      window.removeEventListener("campaign-overlay:closed", onClosed);
+    };
   }, []);
 
   const dismiss = () => {
