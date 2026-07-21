@@ -10,10 +10,15 @@ export default function CampaignOverlay() {
     return () => clearTimeout(show);
   }, []);
 
+  const close = () => {
+    setOpen(false);
+    window.dispatchEvent(new CustomEvent("campaign-overlay:closed"));
+  };
+
   useEffect(() => {
     if (!open) return;
-    const hide = setTimeout(() => setOpen(false), 15000);
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    const hide = setTimeout(close, 15000);
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && close();
     window.addEventListener("keydown", onKey);
     return () => {
       clearTimeout(hide);
@@ -23,10 +28,11 @@ export default function CampaignOverlay() {
 
   if (!open) return null;
 
+
   return (
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center bg-black/40 backdrop-blur-sm p-4 animate-in fade-in duration-300"
-      onClick={() => setOpen(false)}
+      onClick={close}
       role="dialog"
       aria-modal="true"
     >
@@ -35,7 +41,7 @@ export default function CampaignOverlay() {
         onClick={(e) => e.stopPropagation()}
       >
         <button
-          onClick={() => setOpen(false)}
+          onClick={close}
           aria-label="Fechar"
           className="absolute top-3 right-3 z-10 h-9 w-9 grid place-items-center rounded-full bg-white/90 hover:bg-white text-bark shadow-md transition"
         >
