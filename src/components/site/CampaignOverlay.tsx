@@ -32,7 +32,7 @@ export default function CampaignOverlay() {
   return (
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center bg-black/40 backdrop-blur-sm p-4 animate-in fade-in duration-300"
-      onClick={() => setOpen(false)}
+      onClick={close}
       role="dialog"
       aria-modal="true"
     >
@@ -41,7 +41,7 @@ export default function CampaignOverlay() {
         onClick={(e) => e.stopPropagation()}
       >
         <button
-          onClick={() => setOpen(false)}
+          onClick={close}
           aria-label="Fechar"
           className="absolute top-3 right-3 z-10 h-9 w-9 grid place-items-center rounded-full bg-white/90 hover:bg-white text-bark shadow-md transition"
         >
