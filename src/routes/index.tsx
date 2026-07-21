@@ -12,6 +12,7 @@ import ContactSection from "@/components/site/ContactSection";
 
 import BookingWidget from "@/components/site/BookingWidget";
 import CampaignOverlay from "@/components/site/CampaignOverlay";
+import GalleryNudge from "@/components/site/GalleryNudge";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -103,6 +104,7 @@ function Index() {
   return (
     <main className="bg-background text-foreground">
       <CampaignOverlay />
+      <GalleryNudge />
       <Navbar />
       <Hero />
       <HouseSection />
