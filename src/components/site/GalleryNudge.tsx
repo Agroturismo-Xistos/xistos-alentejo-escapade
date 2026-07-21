@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { X, Camera } from "lucide-react";
+import poolImg from "@/assets/nudge-pool.jpg";
+import roomImg from "@/assets/nudge-room.jpg";
 
 const SESSION_KEY = "xistos.galleryNudge.dismissed.v2";
 
@@ -64,9 +66,9 @@ export default function GalleryNudge() {
     <div
       role="dialog"
       aria-labelledby="gallery-nudge-title"
-      className="fixed z-40 bottom-24 md:bottom-6 left-3 md:left-6 w-[85vw] max-w-sm animate-in fade-in slide-in-from-bottom-4 duration-500"
+      className="fixed z-40 bottom-24 md:bottom-6 left-3 md:left-6 w-[85vw] max-w-md animate-in fade-in slide-in-from-bottom-4 duration-500"
     >
-      <div className="relative rounded-2xl bg-cream border border-sand shadow-xl p-4 pr-9">
+      <div className="relative rounded-2xl bg-cream border border-sand shadow-xl p-5 pr-10">
         <button
           onClick={dismiss}
           aria-label="Fechar"
@@ -74,25 +76,27 @@ export default function GalleryNudge() {
         >
           <X className="h-4 w-4" />
         </button>
-        <div className="flex items-start gap-3">
-          <div className="h-10 w-10 shrink-0 grid place-items-center rounded-full bg-ochre/15 text-ochre">
-            <Camera className="h-5 w-5" />
+        <div className="flex items-center gap-2 text-ochre">
+          <div className="h-8 w-8 grid place-items-center rounded-full bg-ochre/15">
+            <Camera className="h-4 w-4" />
           </div>
-          <div className="min-w-0">
-            <h3 id="gallery-nudge-title" className="font-display text-lg text-bark leading-tight">
-              Conheça o Xistos
-            </h3>
-            <p className="mt-1 text-sm text-bark/75 leading-snug">
-              Descubra os quartos, a piscina e todos os espaços preparados para tornar a sua estadia especial.
-            </p>
-            <button
-              onClick={handleClick}
-              className="mt-3 inline-flex items-center gap-2 rounded-full bg-ochre text-cream px-4 py-2 text-sm font-medium hover:bg-ochre/90 transition"
-            >
-              Conhecer o espaço
-            </button>
-          </div>
+          <h3 id="gallery-nudge-title" className="font-display text-xl text-bark leading-tight">
+            Conheça o Xistos
+          </h3>
         </div>
+        <div className="mt-3 grid grid-cols-2 gap-2">
+          <img src={poolImg} alt="Piscina do Agroturismo Xistos" className="h-24 sm:h-28 w-full object-cover rounded-lg" loading="lazy" />
+          <img src={roomImg} alt="Quarto do Agroturismo Xistos" className="h-24 sm:h-28 w-full object-cover rounded-lg" loading="lazy" />
+        </div>
+        <p className="mt-3 text-sm text-bark/75 leading-snug">
+          Descubra os quartos, a piscina e todos os espaços preparados para tornar a sua estadia especial.
+        </p>
+        <button
+          onClick={handleClick}
+          className="mt-4 inline-flex items-center gap-2 rounded-full bg-ochre text-cream px-4 py-2 text-sm font-medium hover:bg-ochre/90 transition"
+        >
+          Conhecer o espaço
+        </button>
       </div>
     </div>
   );
