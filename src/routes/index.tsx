@@ -104,6 +104,7 @@ function Index() {
   return (
     <main className="bg-background text-foreground">
       <CampaignOverlay />
+      <GalleryNudge />
       <Navbar />
       <Hero />
       <HouseSection />
