@@ -53,6 +53,7 @@ export default function HouseSection() {
   const t = useT();
   return (
     <section id="casa" className="py-16 md:py-24 bg-cream">
+      <div id="galeria" className="sr-only" aria-hidden="true" />
       <div className="mx-auto max-w-[1400px] px-6 md:px-12">
         <div className="flex items-end justify-between gap-10 flex-wrap">
           <SectionHeading
