@@ -66,7 +66,7 @@ export default function GalleryNudge() {
     <div
       role="dialog"
       aria-labelledby="gallery-nudge-title"
-      className="fixed z-40 bottom-24 md:bottom-6 left-3 md:left-6 w-[85vw] max-w-md animate-in fade-in slide-in-from-bottom-4 duration-500"
+      className="hidden md:block fixed z-40 bottom-24 md:bottom-6 left-3 md:left-6 w-[85vw] max-w-md animate-in fade-in slide-in-from-bottom-4 duration-500"
     >
       <div className="relative rounded-2xl bg-cream border border-sand shadow-xl p-5 pr-10">
         <button
