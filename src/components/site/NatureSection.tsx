@@ -13,7 +13,7 @@ import n11 from "@/assets/nature-11.jpg";
 import n12 from "@/assets/nature-12.jpg";
 import { useT } from "@/i18n/LanguageContext";
 
-const all = [n1, n2, n3, n4, n5, n6, n7, n8, n10, n11];
+const all = [n1, n2, n3, n4, n5, n6, n7, n8, n10, n11, n12];
 
 export default function NatureSection() {
   const t = useT();
