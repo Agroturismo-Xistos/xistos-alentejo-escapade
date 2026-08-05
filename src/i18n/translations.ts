@@ -69,7 +69,7 @@ const pt: Dict = {
     groups: [
       { title: "Espaços Comuns", desc: "Salas, exteriores e zonas de convívio onde o tempo se demora.", alts: ["Sala comum com lareira", "Pátio exterior com mesa de madeira", "Jardim com rede de descanso"] },
       { title: "Quartos", desc: "Conforto sereno, decoração natural e o silêncio do campo.", alts: ["Quarto com dossel e madeiras", "Quarto com parede de pedra e vista", "Casa de banho rústica"] },
-      { title: "Apartamento", desc: "Casa completa para estadias mais longas, com cozinha e sala.", alts: ["Cozinha e sala do apartamento", "Quarto do apartamento", "Sala do apartamento com pedra"] },
+      { title: "Apartamento", desc: "Casa completa para estadias mais longas, com cozinha e sala.", alts: ["Quarto do apartamento com nichos decorativos", "Cozinha do apartamento com ilha vermelha", "Quarto do apartamento com acesso ao exterior", "Quarto do apartamento com vista para a piscina"] },
     ],
   },
   purpose: {
@@ -189,7 +189,7 @@ const en: Dict = {
     groups: [
       { title: "Common Areas", desc: "Living rooms, outdoor areas and lounges where time slows down.", alts: ["Living room with fireplace", "Outdoor patio with wooden table", "Garden with hammock"] },
       { title: "Rooms", desc: "Serene comfort, natural decor and the silence of the countryside.", alts: ["Bedroom with canopy and wood", "Bedroom with stone wall and view", "Rustic bathroom"] },
-      { title: "Apartment", desc: "A full house for longer stays, with kitchen and living room.", alts: ["Apartment kitchen and lounge", "Apartment bedroom", "Apartment lounge with stone"] },
+      { title: "Apartment", desc: "A full house for longer stays, with kitchen and living room.", alts: ["Apartment bedroom with decorative wall niches", "Apartment kitchen with red island", "Apartment bedroom with outdoor access", "Apartment bedroom with pool view"] },
     ],
   },
   purpose: {

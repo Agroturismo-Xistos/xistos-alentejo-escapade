@@ -1,15 +1,11 @@
 import SectionHeading from "./SectionHeading";
 import ImageCarousel from "./ImageCarousel";
 import c1 from "@/assets/common-1.jpg";
-import c2 from "@/assets/common-pool.jpg";
-import c3 from "@/assets/common-living.jpg";
-import c4 from "@/assets/common-kitchen.jpg";
-// Galeria de imagens do apartamento, atualizada com novos assets
-import c5 from "@/assets/common-pool-snack.jpg";
+import c2 from "@/assets/common-2.jpg";
+import c3 from "@/assets/common-3.jpg";
+import c4 from "@/assets/common-4.jpg";
+import c5 from "@/assets/common-5.png";
 import c6 from "@/assets/common-6.jpg";
-import c7 from "@/assets/common-7.jpg";
-import c8 from "@/assets/common-8.jpg";
-import c9 from "@/assets/common-9.jpg";
 import r1 from "@/assets/room-1.jpg";
 import r2 from "@/assets/room-2.jpg";
 import r3 from "@/assets/room-3.jpg";
@@ -23,30 +19,27 @@ import a4 from "@/assets/apartamento-4.jpg";
 import { useT } from "@/i18n/LanguageContext";
 
 const groupImages = [
-  [c1, c2, c3, c4, c8, c5, c6, c7, c9],
-  [r1, r2, r6, r3, r4, r5],
-  [a1, a3, a4, a2],
+  [c1, c2, c3, c4, c5, c6],
+  [r1, r2, r3, r4, r5, r6],
+  [a1, a2, a3, a4],
 ];
 
 const roomAlts = [
-  "Quarto com vista para a piscina",
-  "Exterior dos quartos ao anoitecer",
-  "Varanda do quarto com mesa exterior",
-  "Casa de banho dos quartos",
-  "Detalhe do quarto com secretária",
-  "Quarto duplo acolhedor",
+  "Quarto twin com vista para o jardim",
+  "Quarto de casal com varanda e vista para a piscina",
+  "Terraço do quarto ao anoitecer",
+  "Detalhe das almofadas e cabeceira",
+  "Quarto twin com iluminação quente",
+  "Quarto com cama vermelha e nichos decorativos",
 ];
 
 const commonAlts = [
-  "Espaço exterior ao anoitecer",
-  "Piscina com vista para o campo",
-  "Sala de estar ampla e luminosa",
-  "Cozinha e sala de refeições",
-  "Balanço de madeira junto à piscina",
-  "Mesa de lanche junto à piscina",
-  "Fachada ao anoitecer com escultura iluminada",
-  "Sala de jantar com detalhes decorativos",
-  "Baloiço com vista para o campo ao pôr-do-sol",
+  "Exterior das casas ao anoitecer",
+  "Piscina com espreguiçadeiras e chapéus de palha",
+  "Sala de estar com lareira",
+  "Sala de refeições junto à cozinha",
+  "Baloiço de madeira junto à piscina",
+  "Baloiço na azinheira com vista para o campo",
 ];
 
 export default function HouseSection() {

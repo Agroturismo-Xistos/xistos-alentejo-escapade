@@ -9,11 +9,11 @@ import flavors4 from "@/assets/act-flavors-4.jpg";
 import crafts from "@/assets/act-crafts.jpg";
 import crafts2 from "@/assets/act-crafts-2.jpg";
 import crafts3 from "@/assets/act-crafts-3.jpg";
-import crafts4 from "@/assets/act-crafts-4.jpg";
+import crafts4 from "@/assets/act-crafts-4.png";
 import shepherd from "@/assets/act-shepherd.jpg";
 import shepherd2 from "@/assets/act-shepherd-2.jpg";
 import shepherd3 from "@/assets/act-shepherd-3.jpg";
-import shepherd4 from "@/assets/act-shepherd-4.jpg";
+import shepherd4 from "@/assets/act-shepherd-4.png";
 import { useT } from "@/i18n/LanguageContext";
 
 const imageGroups = [
