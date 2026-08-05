@@ -6,7 +6,6 @@ import c3 from "@/assets/common-3.jpg";
 import c4 from "@/assets/common-4.jpg";
 import c5 from "@/assets/common-5.png";
 import c6 from "@/assets/common-6.jpg";
-import r1 from "@/assets/room-1.jpg";
 import r2 from "@/assets/room-2.jpg";
 import r3 from "@/assets/room-3.jpg";
 import r4 from "@/assets/room-4.jpg";
@@ -15,17 +14,15 @@ import r6 from "@/assets/room-6.jpg";
 import a1 from "@/assets/apartamento-1.jpg";
 import a2 from "@/assets/apartamento-2.jpg";
 import a3 from "@/assets/apartamento-3.jpg";
-import a4 from "@/assets/apartamento-4.jpg";
 import { useT } from "@/i18n/LanguageContext";
 
 const groupImages = [
-  [c1, c2, c3, c4, c5, c6],
-  [r1, r2, r3, r4, r5, r6],
-  [a1, a2, a3, a4],
+  [c2, c1, c3, c4, c5, c6],
+  [r2, r3, r4, r5, r6],
+  [a1, a2, a3],
 ];
 
 const roomAlts = [
-  "Quarto twin com vista para o jardim",
   "Quarto de casal com varanda e vista para a piscina",
   "Terraço do quarto ao anoitecer",
   "Detalhe das almofadas e cabeceira",
@@ -34,8 +31,8 @@ const roomAlts = [
 ];
 
 const commonAlts = [
-  "Exterior das casas ao anoitecer",
   "Piscina com espreguiçadeiras e chapéus de palha",
+  "Exterior das casas ao anoitecer",
   "Sala de estar com lareira",
   "Sala de refeições junto à cozinha",
   "Baloiço de madeira junto à piscina",
