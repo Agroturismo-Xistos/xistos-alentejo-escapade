@@ -44,7 +44,7 @@ export default function NatureSection() {
         </div>
 
         <div className="mt-12">
-          <ImageCarousel images={images} aspect="aspect-[21/9]" />
+          <ImageCarousel images={images} aspect="aspect-[16/9]" />
         </div>
       </div>
     </section>
